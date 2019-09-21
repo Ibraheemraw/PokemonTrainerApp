@@ -20,6 +20,7 @@
 		48E7B42D2335C3D600079CE9 /* FileManagerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E7B42C2335C3D600079CE9 /* FileManagerHelper.swift */; };
 		48E7B42F2335C42900079CE9 /* UIColorConverter+cgColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E7B42E2335C42900079CE9 /* UIColorConverter+cgColor.swift */; };
 		48E7B4312335C46700079CE9 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E7B4302335C46700079CE9 /* GradientView.swift */; };
+		48E7B4332336EE6E00079CE9 /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E7B4322336EE6E00079CE9 /* UIViewController+Alerts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		48E7B42C2335C3D600079CE9 /* FileManagerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerHelper.swift; sourceTree = "<group>"; };
 		48E7B42E2335C42900079CE9 /* UIColorConverter+cgColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColorConverter+cgColor.swift"; sourceTree = "<group>"; };
 		48E7B4302335C46700079CE9 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		48E7B4322336EE6E00079CE9 /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
 		66B4DF11BC380038478BB6BA /* Pods_PokedexPro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokedexPro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98D4C8457EA4FEF792A87A9A /* Pods-PokedexPro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokedexPro.release.xcconfig"; path = "Target Support Files/Pods-PokedexPro/Pods-PokedexPro.release.xcconfig"; sourceTree = "<group>"; };
 		AB2F6D94B24541C04A5DFF13 /* Pods-PokedexPro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokedexPro.debug.xcconfig"; path = "Target Support Files/Pods-PokedexPro/Pods-PokedexPro.debug.xcconfig"; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				48E7B42E2335C42900079CE9 /* UIColorConverter+cgColor.swift */,
+				48E7B4322336EE6E00079CE9 /* UIViewController+Alerts.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -162,7 +165,6 @@
 				AB2F6D94B24541C04A5DFF13 /* Pods-PokedexPro.debug.xcconfig */,
 				98D4C8457EA4FEF792A87A9A /* Pods-PokedexPro.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -289,6 +291,7 @@
 				48E7B4292335C38500079CE9 /* PokeApiModel.swift in Sources */,
 				48E7B4102335C1FD00079CE9 /* ViewController.swift in Sources */,
 				48E7B42F2335C42900079CE9 /* UIColorConverter+cgColor.swift in Sources */,
+				48E7B4332336EE6E00079CE9 /* UIViewController+Alerts.swift in Sources */,
 				48E7B42B2335C3A100079CE9 /* PokeApiClient.swift in Sources */,
 				48E7B42D2335C3D600079CE9 /* FileManagerHelper.swift in Sources */,
 				48E7B4272335C32600079CE9 /* IBDesignableViews.swift in Sources */,
