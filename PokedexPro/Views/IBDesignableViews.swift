@@ -24,6 +24,17 @@ class CircularImageView: UIImageView {
   }
 }
 
+class CornerButton: UIButton {
+  override func layoutSubviews() {
+    super.layoutSubviews()
+    imageView?.contentMode = .scaleAspectFill
+    layer.cornerRadius = 6.0
+    layer.borderColor = UIColor.black.cgColor
+    layer.borderWidth = 0.5
+    clipsToBounds = true
+  }
+}
+
 @IBDesignable
 class CornerImageView: UIImageView {
   override func layoutSubviews() {
