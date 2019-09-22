@@ -27,8 +27,8 @@ extension UIColor {
     // Black
     static let lightBlack = UIColor(hexString: "434343")!
     // Gray
-    static let stone     = UIColor(hexString: "868f96")!
-    static let cloudy    = UIColor(hexString: "d7d2cc")!
+    static let stone     = UIColor(hexString: "#D7DDE8")!
+    static let cloudy    = UIColor(hexString: "#757F9A")!
     static let fog       = UIColor(hexString: "ebedee")!
     // Purple
     static let indigo    = UIColor(hexString: "3f5efb")!
@@ -67,16 +67,20 @@ extension UIColor {
     static let pink      = UIColor(hexString: "ec77ab")!
     static let lightPink = UIColor(hexString: "f4c4f3")!
     static let candy     = UIColor(hexString: "e5b2ca")!
+    // White
+    static let sutleWhite      = UIColor(hexString: "#ECE9E6")!
+    static let fullWhite = UIColor(hexString: "#FFFFFF")!
 }
 
 extension CGColor {
-    static let blacks  = [UIColor.black.cgColor, UIColor.lightBlack.cgColor]
-    static let grays   = [UIColor.stone.cgColor, UIColor.cloudy.cgColor]
-    static let reds    = [UIColor.bloodRed.cgColor, UIColor.tomato.cgColor]
+    static let dark  = [UIColor.black.cgColor, UIColor.lightBlack.cgColor]
+    static let steel   = [UIColor.stone.cgColor, UIColor.cloudy.cgColor]
+    static let fire    = [UIColor.bloodRed.cgColor, UIColor.tomato.cgColor]
     static let oranges = [UIColor.bloodOrange.cgColor, UIColor.tangerine.cgColor]
     static let blues   = [UIColor.blueberry.cgColor, UIColor.bluejay.cgColor]
     static let greens  = [UIColor.clover.cgColor, UIColor.limerick.cgColor]
     static let golds   = [UIColor.marigold.cgColor, UIColor.mustard.cgColor]
     static let purples = [UIColor.violet.cgColor, UIColor.amethyst.cgColor]
     static let pinks   = [UIColor.pink.cgColor, UIColor.lightPink.cgColor]
+    static let whites = [UIColor.sutleWhite.cgColor, UIColor.fullWhite.cgColor]
 }
