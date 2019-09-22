@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		14F1816D67D425DC9AD586CE /* Pods_PokedexPro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66B4DF11BC380038478BB6BA /* Pods_PokedexPro.framework */; };
+		48E309B22336F4380019359D /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E309B12336F4380019359D /* NetworkError.swift */; };
 		48E7B40C2335C1FD00079CE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E7B40B2335C1FD00079CE9 /* AppDelegate.swift */; };
 		48E7B40E2335C1FD00079CE9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E7B40D2335C1FD00079CE9 /* SceneDelegate.swift */; };
 		48E7B4102335C1FD00079CE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E7B40F2335C1FD00079CE9 /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		48E309B12336F4380019359D /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		48E7B4082335C1FD00079CE9 /* PokedexPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokedexPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48E7B40B2335C1FD00079CE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48E7B40D2335C1FD00079CE9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				48E7B42C2335C3D600079CE9 /* FileManagerHelper.swift */,
+				48E309B12336F4380019359D /* NetworkError.swift */,
 			);
 			path = SwiftyHelpers;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				48E7B4272335C32600079CE9 /* IBDesignableViews.swift in Sources */,
 				48E7B40C2335C1FD00079CE9 /* AppDelegate.swift in Sources */,
 				48E7B40E2335C1FD00079CE9 /* SceneDelegate.swift in Sources */,
+				48E309B22336F4380019359D /* NetworkError.swift in Sources */,
 				48E7B4312335C46700079CE9 /* GradientView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
