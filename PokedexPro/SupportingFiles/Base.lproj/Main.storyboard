@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainController" customModule="PokedexPro" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,13 +17,13 @@
                         <color key="backgroundColor" red="0.8730652266100174" green="0.87194638078842235" blue="0.89148983041647123" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="nHp-iQ-64S"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="icons8-abra-50" id="nHp-iQ-64S"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1077.5999999999999" y="126.38680659670166"/>
         </scene>
-        <!--Item-->
+        <!--Pokedex-->
         <scene sceneID="ONU-lU-Qy5">
             <objects>
                 <viewController id="Org-iL-mM7" sceneMemberID="viewController">
@@ -33,13 +33,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="EPg-dB-SNf"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="cdY-v6-Fdd"/>
+                    <tabBarItem key="tabBarItem" title="Pokedex" image="icons8-pokedex-50" id="cdY-v6-Fdd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wyI-Hp-jff" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1946" y="126"/>
         </scene>
-        <!--Item-->
+        <!--Party-->
         <scene sceneID="t7l-ts-tnG">
             <objects>
                 <viewController id="R0t-0V-wif" sceneMemberID="viewController">
@@ -49,13 +49,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="vdn-OX-L1l"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="GEb-hS-Av5"/>
+                    <tabBarItem key="tabBarItem" title="Party" image="icons8-pokeballs-50" id="GEb-hS-Av5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ew-QS-lhN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2774" y="125"/>
         </scene>
-        <!--Item-->
+        <!--Trainer-->
         <scene sceneID="gn0-A3-Qsi">
             <objects>
                 <viewController id="Ndl-xE-pz6" sceneMemberID="viewController">
@@ -65,7 +65,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="yUf-lr-BBF"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="crq-Bv-Zw9"/>
+                    <tabBarItem key="tabBarItem" title="Trainer" image="pokemon-trainer" id="crq-Bv-Zw9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gjx-Ys-Nh7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -77,6 +77,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="lbu-Gg-DfP" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WZl-2f-uhz">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -92,4 +93,10 @@
             <point key="canvasLocation" x="2364" y="-642"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-abra-50" width="30" height="30"/>
+        <image name="icons8-pokeballs-50" width="30" height="30"/>
+        <image name="icons8-pokedex-50" width="30" height="30"/>
+        <image name="pokemon-trainer" width="30" height="30"/>
+    </resources>
 </document>
