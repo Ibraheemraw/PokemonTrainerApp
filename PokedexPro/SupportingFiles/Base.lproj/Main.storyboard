@@ -26,7 +26,7 @@
         <!--Pokedex-->
         <scene sceneID="ONU-lU-Qy5">
             <objects>
-                <viewController id="Org-iL-mM7" customClass="PokedexController" customModule="PokedexPro" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PokedexController" id="Org-iL-mM7" customClass="PokedexController" customModule="PokedexPro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lDx-Rj-g84">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,7 +42,7 @@
         <!--Party-->
         <scene sceneID="t7l-ts-tnG">
             <objects>
-                <viewController id="R0t-0V-wif" customClass="PartyController" customModule="PokedexPro" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PartyController" id="R0t-0V-wif" customClass="PartyController" customModule="PokedexPro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YtW-BK-mzy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -58,7 +58,7 @@
         <!--Trainer-->
         <scene sceneID="gn0-A3-Qsi">
             <objects>
-                <viewController id="Ndl-xE-pz6" customClass="TrainerProfileController" customModule="PokedexPro" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TrainerProfileController" id="Ndl-xE-pz6" customClass="TrainerProfileController" customModule="PokedexPro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fJn-Q6-FI3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -175,6 +175,14 @@
                         <viewLayoutGuide key="safeArea" id="yUf-lr-BBF"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Trainer" image="pokemon-trainer" id="crq-Bv-Zw9"/>
+                    <connections>
+                        <outlet property="numberOfPokemonDiscovered" destination="EXC-Hr-d37" id="zLc-NP-b7M"/>
+                        <outlet property="numberOfbadgesEarned" destination="huR-8p-5ON" id="726-vw-57M"/>
+                        <outlet property="profileImageView" destination="SMM-de-jpx" id="mJb-26-i8J"/>
+                        <outlet property="trainerBio" destination="q7M-wk-7Yl" id="RX7-ls-KCf"/>
+                        <outlet property="trainerName" destination="1Fw-bb-555" id="X7f-0v-kmA"/>
+                        <outlet property="trainerRegion" destination="8we-rv-WOe" id="c4i-fi-sD0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gjx-Ys-Nh7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -183,7 +191,7 @@
         <!--Edit Trainer Profile Controller-->
         <scene sceneID="NFI-u0-KXX">
             <objects>
-                <viewController id="Y20-ih-zrM" customClass="EditTrainerProfileController" customModule="PokedexPro" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditTrainerProfileController" id="Y20-ih-zrM" customClass="EditTrainerProfileController" customModule="PokedexPro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ILe-bC-dfS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
