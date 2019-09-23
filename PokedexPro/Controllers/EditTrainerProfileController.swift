@@ -8,6 +8,7 @@ class EditTrainerProfileController: UIViewController {
     @IBOutlet weak var regionField: UITextField!
     @IBOutlet weak var numberOfBadgesLabel: UILabel!
     @IBOutlet weak var bioTextView: UITextView!
+    @IBOutlet weak var saveBttn: CornerButton!
     private var imagePickerViewController: UIImagePickerController!
     private let pickerView = UIPickerView()
     private var currentRegionList = [String]()
@@ -21,9 +22,6 @@ class EditTrainerProfileController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         callMethods()
-    }
-    override func viewDidDisappear(_ animated: Bool) {
-        performSegue(withIdentifier: "Unwind from EditTrainerProfileController", sender: self)
     }
     // MARK: - Actions and Methods
     private func callMethods(){
@@ -91,22 +89,48 @@ class EditTrainerProfileController: UIViewController {
     @IBAction func stepperDidPress(_ sender: UIStepper) {
         numberOfBadgesLabel.text = String(Int(sender.value))
     }
-
+    @IBAction func saveBttnTapped(_ sender: CornerButton) {
+         performSegue(withIdentifier: "Unwind from EditTrainerProfileController", sender: self)
+        self.dismiss(animated: true, completion: nil)
+    }
 }
 // MARK: - Extensions
 extension EditTrainerProfileController: UITextFieldDelegate {
     #warning("Issue with textfields please fix, cannot type in to save entry")
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         currentTextField = textField
-        if textField == regionField {
-            currentRegionList = Region.regions
-        }
+        switch textField {
+        case usernameField:
+            guard let username = usernameField.text, !username.isEmpty else {
+                return false }
+            self.username = username
+        case regionField:
+        currentRegionList = Region.regions
         pickerView.reloadAllComponents()
+        default:
+            print("issue")
+        }
+        return true
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        guard let username = usernameField.text, let region = regionField.text, let trainerBio = bioTextView.text, !username.isEmpty, !region.isEmpty, !trainerBio.isEmpty else { return false }
+        self.username = username
+        self.region = region
+        self.trainerBio = trainerBio
         return true
     }
 }
 #warning("Set up text view logic")
-extension EditTrainerProfileController: UITextViewDelegate {}
+extension EditTrainerProfileController: UITextViewDelegate {
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        guard let trainerBio = bioTextView.text, !trainerBio.isEmpty else { return false }
+        self.trainerBio = trainerBio
+        if (text == "\n") || !text.isEmpty {
+            textView.resignFirstResponder()
+        }
+        return true
+    }
+}
 
 extension EditTrainerProfileController: UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {

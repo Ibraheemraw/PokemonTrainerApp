@@ -15,6 +15,8 @@
 		48E309BC2338576F0019359D /* TrainerProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E309BB2338576F0019359D /* TrainerProfileController.swift */; };
 		48E309BE233857890019359D /* EditTrainerProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E309BD233857890019359D /* EditTrainerProfileController.swift */; };
 		48E309C023386ADD0019359D /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E309BF23386ADD0019359D /* Region.swift */; };
+		48E309C223392BCB0019359D /* TrainerCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48E309C123392BCB0019359D /* TrainerCardView.xib */; };
+		48E309C423392BEF0019359D /* TrainerCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E309C323392BEF0019359D /* TrainerCardView.swift */; };
 		48E7B40C2335C1FD00079CE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E7B40B2335C1FD00079CE9 /* AppDelegate.swift */; };
 		48E7B40E2335C1FD00079CE9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E7B40D2335C1FD00079CE9 /* SceneDelegate.swift */; };
 		48E7B4102335C1FD00079CE9 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E7B40F2335C1FD00079CE9 /* MainController.swift */; };
@@ -38,6 +40,8 @@
 		48E309BB2338576F0019359D /* TrainerProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerProfileController.swift; sourceTree = "<group>"; };
 		48E309BD233857890019359D /* EditTrainerProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTrainerProfileController.swift; sourceTree = "<group>"; };
 		48E309BF23386ADD0019359D /* Region.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
+		48E309C123392BCB0019359D /* TrainerCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainerCardView.xib; sourceTree = "<group>"; };
+		48E309C323392BEF0019359D /* TrainerCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerCardView.swift; sourceTree = "<group>"; };
 		48E7B4082335C1FD00079CE9 /* PokedexPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokedexPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48E7B40B2335C1FD00079CE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48E7B40D2335C1FD00079CE9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +124,8 @@
 			children = (
 				48E7B4262335C32600079CE9 /* IBDesignableViews.swift */,
 				48E7B4302335C46700079CE9 /* GradientView.swift */,
+				48E309C123392BCB0019359D /* TrainerCardView.xib */,
+				48E309C323392BEF0019359D /* TrainerCardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -251,6 +257,7 @@
 			files = (
 				48E7B4182335C1FE00079CE9 /* LaunchScreen.storyboard in Resources */,
 				48E7B4152335C1FE00079CE9 /* Assets.xcassets in Resources */,
+				48E309C223392BCB0019359D /* TrainerCardView.xib in Resources */,
 				48E7B4132335C1FD00079CE9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,6 +332,7 @@
 				48E7B40E2335C1FD00079CE9 /* SceneDelegate.swift in Sources */,
 				48E309B22336F4380019359D /* NetworkError.swift in Sources */,
 				48E309BA233857560019359D /* PartyController.swift in Sources */,
+				48E309C423392BEF0019359D /* TrainerCardView.swift in Sources */,
 				48E7B4312335C46700079CE9 /* GradientView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
