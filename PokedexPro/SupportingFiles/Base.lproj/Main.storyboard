@@ -24,40 +24,40 @@
                                 <rect key="frame" x="0.0" y="100" width="375" height="518"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9mM-Fz-7EN">
-                                    <size key="itemSize" width="181" height="146"/>
+                                    <size key="itemSize" width="372" height="146"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="pokemonCell" id="dD4-3C-7Kc" customClass="PokemonCell" customModule="PokedexPro" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="181" height="146"/>
+                                        <rect key="frame" x="1.5" y="0.0" width="372" height="146"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4y7-EB-tGN">
-                                            <rect key="frame" x="0.0" y="0.0" width="181" height="146"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="372" height="146"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUX-xX-rhb">
-                                                    <rect key="frame" x="8" y="14" width="165" height="21"/>
+                                                    <rect key="frame" x="8" y="14" width="356" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UEa-RV-wD6">
-                                                    <rect key="frame" x="93" y="43" width="80" height="80"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-pokeball-48" translatesAutoresizingMaskIntoConstraints="NO" id="UEa-RV-wD6">
+                                                    <rect key="frame" x="284" y="43" width="80" height="80"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="80" id="6mY-zy-kkd"/>
                                                         <constraint firstAttribute="height" constant="80" id="oXG-UK-yad"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INK-6B-IrD">
-                                                    <rect key="frame" x="8" y="63" width="77" height="21"/>
+                                                    <rect key="frame" x="8" y="63" width="268" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="47i-mT-KoZ">
-                                                    <rect key="frame" x="8" y="94" width="77" height="21"/>
+                                                    <rect key="frame" x="8" y="94" width="268" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -78,7 +78,7 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" red="0.87306522659999997" green="0.87194638079999998" blue="0.89148983039999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <size key="customSize" width="181" height="146"/>
+                                        <size key="customSize" width="372" height="146"/>
                                         <connections>
                                             <outlet property="pokemonImg" destination="UEa-RV-wD6" id="Uax-3h-SzX"/>
                                             <outlet property="pokemonName" destination="HUX-xX-rhb" id="Eu6-Bj-jpy"/>
@@ -91,17 +91,20 @@
                         </subviews>
                         <color key="backgroundColor" red="0.8730652266100174" green="0.87194638078842235" blue="0.89148983041647123" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="wxr-Fm-UCa" firstAttribute="top" secondItem="t0E-NT-Wm0" secondAttribute="bottom" id="37b-Su-xMG"/>
-                            <constraint firstItem="wxr-Fm-UCa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AtM-Ye-SaH"/>
                             <constraint firstItem="t0E-NT-Wm0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="HNm-EF-Vh2"/>
                             <constraint firstItem="t0E-NT-Wm0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="RrP-iw-JCC"/>
-                            <constraint firstItem="wxr-Fm-UCa" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="cXO-Gr-fou"/>
-                            <constraint firstItem="wxr-Fm-UCa" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dAU-Mc-lli"/>
+                            <constraint firstItem="wxr-Fm-UCa" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="SPw-hX-TEd"/>
                             <constraint firstItem="t0E-NT-Wm0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hQn-2d-0Vl"/>
+                            <constraint firstItem="wxr-Fm-UCa" firstAttribute="top" secondItem="t0E-NT-Wm0" secondAttribute="bottom" id="pQZ-eY-tf2"/>
+                            <constraint firstItem="wxr-Fm-UCa" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="pjZ-KI-ntg"/>
+                            <constraint firstItem="wxr-Fm-UCa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ub7-cg-uJS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Lhr-W2-tWB"/>
+                    <connections>
+                        <outlet property="pokemonCollectionView" destination="wxr-Fm-UCa" id="aAB-2t-IRA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -441,6 +444,7 @@
     </scenes>
     <resources>
         <image name="icons8-abra-50" width="30" height="30"/>
+        <image name="icons8-pokeball-48" width="48" height="48"/>
         <image name="icons8-pokeballs-50" width="30" height="30"/>
         <image name="icons8-pokedex-50" width="30" height="30"/>
         <image name="pokemon-trainer" width="30" height="30"/>
