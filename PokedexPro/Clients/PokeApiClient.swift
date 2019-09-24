@@ -15,8 +15,8 @@ struct PokeApiClient {
         let task = session.dataTask(with: request) { (data, response, error) in
             if let data = data {
                 do {
-                    let result = try JSONDecoder().decode(Pokedex.self, from: data)
-                    handler(.success(result.results))
+                    let results = try JSONDecoder().decode(Pokedex.self, from: data)
+                    handler(.success(results.results))
                 } catch {
                     handler(.failure(.jsonDecodeError(error)))
                 }

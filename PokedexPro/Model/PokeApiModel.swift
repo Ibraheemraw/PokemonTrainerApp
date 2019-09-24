@@ -9,7 +9,7 @@ struct Pokedex: Codable {
 
 struct Pokemon: Codable {
     let name: String
-    let pokemonUrl: PokemonInfo
+    let pokemonUrl: URL
     enum CodingKeys: String, CodingKey {
         case name
         case pokemonUrl = "url"

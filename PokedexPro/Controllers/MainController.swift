@@ -28,9 +28,13 @@ class MainController: UIViewController {
         PokeApiClient.fetchPokemon { [weak self] (result) in
             switch result {
             case .success(let pokemon):
-                self?.pokemon = pokemon
+                DispatchQueue.main.async {
+                    self?.pokemon = pokemon
+                }
             case .failure(let error):
-                self?.showAlert(alertTitle: "Fetcing Data Error", alertMessage: "\(error)", alertStyle: .alert)
+                DispatchQueue.main.async {
+                    self?.showAlert(alertTitle: "Fetcing Data Error", alertMessage: "\(error)", alertStyle: .alert)
+                }
             }
         }
     }

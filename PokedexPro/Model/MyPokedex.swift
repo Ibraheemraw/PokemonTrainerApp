@@ -1,6 +1,6 @@
 import Foundation
 
-struct MyPokedex {
+struct MyPokedex: Codable {
     let nameofPokemon: String
     let type1: String
     let type2: String
