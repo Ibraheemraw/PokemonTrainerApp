@@ -7,7 +7,6 @@ class MainController: UIViewController {
         didSet{
             DispatchQueue.main.async {
                 self.pokemonCollectionView.reloadData()
-                self.pokemonCollectionView.reloadInputViews()
             }
         }
     }
@@ -19,7 +18,7 @@ class MainController: UIViewController {
     // MARK: - Actions and Methods
     private func callMethods(){
         setupOutlets()
-       // fetchData()
+        fetchData()
     }
     private func setupOutlets(){
         pokemonCollectionView.delegate = self
@@ -35,20 +34,19 @@ class MainController: UIViewController {
             }
         }
     }
-
 }
 
 extension MainController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return pokemon.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let pokemonCell = collectionView.dequeueReusableCell(withReuseIdentifier: "pokemonCell", for: indexPath) as? PokemonCell else {
             showAlert(alertTitle: "Cell Creation Error", alertMessage: "was not able to load the custom cell created", alertStyle: .alert)
             return UICollectionViewCell() }
-        //let settingCells = pokemon[indexPath.row]
-        //pokemonCell.pokemonName.text = settingCells.name
+        let settingCells = pokemon[indexPath.row]
+        pokemonCell.pokemonName.text = settingCells.name
         return pokemonCell
     }
 }
