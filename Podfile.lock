@@ -1,16 +1,20 @@
 PODS:
+  - Kingfisher (5.7.0)
   - Toucan (1.1.0)
 
 DEPENDENCIES:
+  - Kingfisher
   - Toucan (~> 1.1)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Kingfisher
     - Toucan
 
 SPEC CHECKSUMS:
+  Kingfisher: c7d211b54f1f30d8060aadab177d52b4349c825b
   Toucan: 8f228fabb21521b9658692df9325fe76e71d74b2
 
-PODFILE CHECKSUM: 525803e837bb0c7dc93e8b4649c29a23eb50b39d
+PODFILE CHECKSUM: 0e8db73ff4d069394673e443eacec5e26e09cd74
 
 COCOAPODS: 1.6.0

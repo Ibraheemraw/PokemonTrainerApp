@@ -7,5 +7,6 @@ class PokemonCell: UICollectionViewCell {
     @IBOutlet weak var type2: UILabel!
     @IBOutlet weak var pokemonImg: UIImageView!
     // MARK: - Life Cycle
+    
     // MARK: - Actions and Methods
 }

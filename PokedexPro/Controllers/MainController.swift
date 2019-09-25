@@ -19,6 +19,7 @@ class MainController: UIViewController {
     private func callMethods(){
         setupOutlets()
         fetchData()
+        setupCollectionViewlayout()
     }
     private func setupOutlets(){
         pokemonCollectionView.delegate = self
@@ -38,6 +39,12 @@ class MainController: UIViewController {
             }
         }
     }
+    private func setupCollectionViewlayout(){
+        let width = (view.frame.size.width - 10) / 2
+        let layout = pokemonCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.itemSize = CGSize(width: width, height: width)
+        pokemonCollectionView.layer.cornerRadius = 5
+    }
 }
 
 extension MainController: UICollectionViewDataSource {
@@ -55,11 +62,7 @@ extension MainController: UICollectionViewDataSource {
     }
 }
 
-extension MainController: UICollectionViewDelegateFlowLayout {
+extension MainController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 0, height: 175)
-    }
-
 }

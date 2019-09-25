@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1100"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7EB6F16FB3F0D5B38A50F4BD866CEF00"
+               BlueprintIdentifier = "A9DAB3ABD21439F50888E48D1A967878"
                BuildableName = "Pods_PokedexPro.framework"
                BlueprintName = "Pods-PokedexPro"
                ReferencedContainer = "container:Pods.xcodeproj">

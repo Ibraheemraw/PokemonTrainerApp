@@ -7,4 +7,6 @@ target 'PokedexPro' do
 
   # Pods for PokedexPro
   pod 'Toucan', '~> 1.1'
+  pod 'Kingfisher'
+
 end
