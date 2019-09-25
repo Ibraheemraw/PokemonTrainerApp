@@ -55,7 +55,6 @@ extension MainController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return pokemon.count
     }
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let pokemonCell = collectionView.dequeueReusableCell(withReuseIdentifier: "pokemonCell", for: indexPath) as? PokemonCell else {
             showAlert(alertTitle: "Cell Creation Error", alertMessage: "was not able to load the custom cell created", alertStyle: .alert)
@@ -77,6 +76,9 @@ extension MainController: UICollectionViewDataSource {
                     default:
                         print("no types avaible")
                     }
+                    let pokemonID = info.id
+                    let url = URL(string: "https://pokeres.bastionbot.org/images/pokemon/\(pokemonID).png")
+                    pokemonCell.pokemonImg.kf.setImage(with: url)
                 }
             case .failure(let error):
                 DispatchQueue.main.async {
