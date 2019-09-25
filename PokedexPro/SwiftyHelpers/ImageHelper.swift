@@ -1,5 +1,5 @@
 import UIKit
-
+import Kingfisher
+import Toucan
 struct ImageHelper {
-    static public func setImage(endpointURL url: URL)-> UIImage {}
 }

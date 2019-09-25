@@ -107,6 +107,7 @@
                     <navigationItem key="navigationItem" id="Lhr-W2-tWB"/>
                     <connections>
                         <outlet property="pokemonCollectionView" destination="wxr-Fm-UCa" id="kVE-oX-vBk"/>
+                        <outlet property="searchBar" destination="t0E-NT-Wm0" id="fdS-pi-bg0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
