@@ -205,11 +205,11 @@
                         <viewLayoutGuide key="safeArea" id="rGU-UH-zAB"/>
                     </view>
                     <connections>
-                        <outlet property="imageOfPokemon" destination="T3Q-tt-mKe" id="bAL-57-txC"/>
+                        <outlet property="imageOfPokemon" destination="T3Q-tt-mKe" id="VQC-ke-a9S"/>
                         <outlet property="movesContainerView" destination="NY5-2f-K96" id="Bb9-Db-gFW"/>
-                        <outlet property="nameOfPokemon" destination="SHG-tM-eb5" id="Cj5-cB-JSy"/>
-                        <outlet property="pokemonType1" destination="jpa-6f-4o6" id="g5j-U4-7dR"/>
-                        <outlet property="pokemonType2" destination="Bh7-Kl-dDa" id="8Jh-eW-D79"/>
+                        <outlet property="nameOfPokemon" destination="SHG-tM-eb5" id="NwQ-BK-dUa"/>
+                        <outlet property="pokemonType1" destination="jpa-6f-4o6" id="il4-Sr-ZD4"/>
+                        <outlet property="pokemonType2" destination="Bh7-Kl-dDa" id="g0z-ED-mwd"/>
                         <outlet property="statsContainerView" destination="Ggq-x3-Yx0" id="OMG-v5-8c3"/>
                     </connections>
                 </viewController>

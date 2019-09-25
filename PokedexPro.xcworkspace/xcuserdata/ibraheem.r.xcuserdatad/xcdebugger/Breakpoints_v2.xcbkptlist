@@ -3,4 +3,102 @@
    uuid = "16281C06-A768-41AD-9404-4B8E33914B3F"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D250E92A-5173-4663-8D73-061115416C9F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PokedexPro/Controllers/MainController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "prepare(for:sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D8503F14-A527-409F-86CA-C1C8E6803EAA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PokedexPro/Controllers/MainController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "setupSegeueInfo(pokemonList:myPath:myDestination:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D8503F14-A527-409F-86CA-C1C8E6803EAA - 1d9c70aa3393413b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PokedexPro.MainController.(setupSegeueInfo in _CBEFB2165CC21A7AD23AA3E3E1EF9836)(pokemonList: Swift.Array&lt;PokedexPro.Pokemon&gt;, myPath: Foundation.IndexPath, myDestination: PokedexPro.PokemonDetailController) -&gt; ()"
+                  moduleName = "PokedexPro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ibraheem.r/Documents/PokedexPro/PokedexPro/Controllers/MainController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "602">
+               </Location>
+               <Location
+                  uuid = "D8503F14-A527-409F-86CA-C1C8E6803EAA - 15d6b96b14af0400"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;PokedexPro.PokemonInfo, PokedexPro.NetworkError&gt;) -&gt; () in PokedexPro.MainController.(setupSegeueInfo in _CBEFB2165CC21A7AD23AA3E3E1EF9836)(pokemonList: Swift.Array&lt;PokedexPro.Pokemon&gt;, myPath: Foundation.IndexPath, myDestination: PokedexPro.PokemonDetailController) -&gt; ()"
+                  moduleName = "PokedexPro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ibraheem.r/Documents/PokedexPro/PokedexPro/Controllers/MainController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "223">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7D240F2F-ABE0-4A6C-B9D1-FFA03B7AD784"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PokedexPro/Controllers/MainController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "setupSegeueInfo(pokemonList:myPath:myDestination:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9DF73EBA-FB32-4E05-AA66-8FBFFA77C064"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PokedexPro/Controllers/MainController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "setupSegeueInfo(pokemonList:myPath:myDestination:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

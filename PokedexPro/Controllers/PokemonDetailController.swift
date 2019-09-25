@@ -22,6 +22,7 @@ class PokemonDetailController: UIViewController {
     @IBOutlet weak var attack:UILabel!
     @IBOutlet weak var hp:UILabel!
     public var pokemonInfoIExpect: PokemonInfo!
+    public var pokemonIExpect: Pokemon!
     override var canBecomeFirstResponder: Bool{
         return true
     }
@@ -34,10 +35,33 @@ class PokemonDetailController: UIViewController {
     
     // MARK: - Actions and Methods
     private func callMethods(){
-        setupImageSettings()
-        callGestures()
+        #warning("Fix the issues that car commented out error message says Unexpectedly found nil while implicitly unwrapping an Optional value for the image view")
+        //setupImageSettings()
+      //  callGestures()
+        assginValuesToOutlets()
     }
-    
+    private func assginValuesToOutlets(){
+        nameOfPokemon.text =  pokemonIExpect.name
+        setupPokemonMoves()
+        setupPokemonImage()
+    }
+    private func setupPokemonMoves(){
+        switch pokemonInfoIExpect.types.count {
+        case 0:
+            pokemonType1.text = pokemonInfoIExpect.types[0].type.name
+            pokemonType2.text = ""
+        case 1:
+           pokemonType1.text = pokemonInfoIExpect.types[0].type.name
+           pokemonType2.text = pokemonInfoIExpect.types[1].type.name
+        default:
+            showAlert(alertTitle: "Type Issue", alertMessage: "No Types Avaible for a caertain pokemon", alertStyle: .alert)
+        }
+    }
+    private func setupPokemonImage(){
+        let id = pokemonInfoIExpect.id
+        let url = URL(string: "https://pokeres.bastionbot.org/images/pokemon/\(id).png")
+        imageOfPokemon.kf.setImage(with: url)
+    }
     private func setupImageSettings(){
         imageOfPokemon.isUserInteractionEnabled = true
     }

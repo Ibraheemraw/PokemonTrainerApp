@@ -27,6 +27,16 @@ class MainController: UIViewController {
         callMethods()
     }
     // MARK: - Actions and Methods
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destination = segue.destination as? PokemonDetailController, let cell = sender as? PokemonCell, let indexpath = pokemonCollectionView.indexPath(for: cell) else {
+            showAlert(alertTitle: "Error with Segue", alertMessage: "Check: destination, cell, and indexPath", alertStyle: .alert)
+            return }
+        if searchBarIsEmpty{
+            setupSegeueInfo(pokemonList: pokemon, myPath: indexpath, myDestination: destination)
+        } else {
+            setupSegeueInfo(pokemonList: searchedPokemon, myPath: indexpath, myDestination: destination)
+        }
+    }
     private func callMethods(){
         setupOutlets()
         fetchData()
@@ -57,8 +67,23 @@ class MainController: UIViewController {
         layout.itemSize = CGSize(width: width, height: width)
         pokemonCollectionView.layer.cornerRadius = 5
     }
-    
-    private func setupCell(myCell cell: PokemonCell, pokemonList list: [Pokemon], indexPath: IndexPath){
+    private func setupSegeueInfo(pokemonList list: [Pokemon], myPath indexPath: IndexPath, myDestination destination: PokemonDetailController){
+        let pokemonSelected = list[indexPath.row]
+        destination.pokemonIExpect = pokemonSelected
+        PokeApiClient.fetchPokemonEntryInfo(pokemonUrl: pokemonSelected.pokemonUrl.absoluteString)  { [weak self] (result) in
+            switch result {
+            case .success(let info):
+                DispatchQueue.main.async {
+                    destination.pokemonInfoIExpect = info
+                }
+            case .failure(let error):
+                DispatchQueue.main.async {
+                    self?.showAlert(alertTitle: "Fetcing Data Error", alertMessage: "\(error)", alertStyle: .alert)
+                }
+            }
+        }
+    }
+    private func setupCell(myCell cell: PokemonCell, pokemonList list: [Pokemon],myPath indexPath: IndexPath){
         let settingCells = list[indexPath.row]
         cell.pokemonName.text = settingCells.name
         let pokemonEndpoint = settingCells.pokemonUrl.absoluteString
@@ -74,7 +99,7 @@ class MainController: UIViewController {
                         cell.type1.text = info.types[0].type.name
                         cell.type2.text = info.types[1].type.name
                     default:
-                        print("no types avaible")
+                        self?.showAlert(alertTitle: "Type Issue", alertMessage: "No Types Avaible for a caertain pokemon", alertStyle: .alert)
                     }
                     let pokemonID = info.id
                     let url = URL(string: "https://pokeres.bastionbot.org/images/pokemon/\(pokemonID).png")
@@ -102,9 +127,9 @@ extension MainController: UICollectionViewDataSource {
                    showAlert(alertTitle: "Cell Creation Error", alertMessage: "was not able to load the custom cell created", alertStyle: .alert)
                    return UICollectionViewCell() }
         if searchBarIsEmpty {
-            setupCell(myCell: pokemonCell, pokemonList: pokemon, indexPath: indexPath)
+            setupCell(myCell: pokemonCell, pokemonList: pokemon, myPath: indexPath)
         } else {
-            setupCell(myCell: pokemonCell, pokemonList: searchedPokemon, indexPath: indexPath)
+            setupCell(myCell: pokemonCell, pokemonList: searchedPokemon, myPath: indexPath)
         }
         return pokemonCell
     }
