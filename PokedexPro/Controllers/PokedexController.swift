@@ -12,6 +12,14 @@ class PokedexController: UIViewController {
             }
         }
     }
+    private var searchedEntries = [MyPokedex](){
+        didSet{
+            DispatchQueue.main.async {
+                self.pokedexCollectionView.reloadData()
+            }
+        }
+    }
+    private var searchBarIsEmpty = true
     private var pokedexDataManager = ItemsDataManager<MyPokedex>()
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -41,7 +49,20 @@ class PokedexController: UIViewController {
 }
 
 extension PokedexController: UISearchBarDelegate {
-    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard var userText = searchBar.text else { return }
+        if userText.isEmpty {
+            searchBarIsEmpty = true
+            pokedexCollectionView.reloadData()
+        } else {
+            searchBarIsEmpty = false
+            userText = userText.lowercased()
+            searchedEntries = pokedexDataManager.fetchItemsFromDocumentsDirectory().filter{$0.nameofPokemon.lowercased().contains(userText) || $0.nameofPokemon.uppercased().contains(userText)}
+            pokedexCollectionView.reloadData()
+        }
+        searchBar.resignFirstResponder()
+        return
+    }
 }
 
 extension PokedexController: UICollectionViewDelegate {
@@ -54,20 +75,36 @@ extension PokedexController: UICollectionViewDataSource {
             showAlert(alertTitle: "Cell ID Issue", alertMessage: "Wrong Cell ID", alertStyle: .alert)
             return UICollectionViewCell()
         }
-        let pokedexEntry = pokedexDataManager.fetchItemsFromDocumentsDirectory()[indexPath.row]
-        pokedexCell.pokemonName.text = pokedexEntry.nameofPokemon
-        pokedexCell.type1.text = pokedexEntry.type1
-        if pokedexEntry.type2.isEmpty {
-            pokedexCell.type2.text = ""
+        if searchBarIsEmpty {
+            let pokedexEntry = pokedexDataManager.fetchItemsFromDocumentsDirectory()[indexPath.row]
+            pokedexCell.pokemonName.text = pokedexEntry.nameofPokemon
+            pokedexCell.type1.text = pokedexEntry.type1
+            if pokedexEntry.type2.isEmpty {
+                pokedexCell.type2.text = ""
+            } else {
+                pokedexCell.type2.text = pokedexEntry.type2
+            }
+            pokedexCell.pokemonImage.kf.setImage(with: pokedexEntry.pokemonImage)
         } else {
-            pokedexCell.type2.text = pokedexEntry.type2
+            let pokedexEntry = searchedEntries[indexPath.row]
+            pokedexCell.pokemonName.text = pokedexEntry.nameofPokemon
+            pokedexCell.type1.text = pokedexEntry.type1
+            if pokedexEntry.type2.isEmpty {
+                pokedexCell.type2.text = ""
+            } else {
+                pokedexCell.type2.text = pokedexEntry.type2
+            }
+            pokedexCell.pokemonImage.kf.setImage(with: pokedexEntry.pokemonImage)
         }
-        pokedexCell.pokemonImage.kf.setImage(with: pokedexEntry.pokemonImage)
         return pokedexCell
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return pokedexDataManager.fetchItemsFromDocumentsDirectory().count
+        if searchBarIsEmpty {
+            return pokedexDataManager.fetchItemsFromDocumentsDirectory().count
+        } else {
+            return searchedEntries.count
+        }
     }
 }
 
