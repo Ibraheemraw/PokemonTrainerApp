@@ -78,9 +78,9 @@
             filePath = "PokedexPro/Controllers/PokemonDetailController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "setupPokemonMoves()"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "assignTypeToPokemon()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -94,9 +94,9 @@
             filePath = "PokedexPro/Controllers/PokemonDetailController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "setupPokemonMoves()"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "assignTypeToPokemon()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

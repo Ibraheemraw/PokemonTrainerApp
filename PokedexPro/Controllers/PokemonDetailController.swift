@@ -29,10 +29,11 @@ class PokemonDetailController: UIViewController {
     }
     private func assginValuesToOutlets(){
         nameOfPokemon.text =  pokemonIExpect.name
-        setupPokemonMoves()
+        assignTypeToPokemon()
         setupPokemonImage()
+        setupPokemonStats(myView: statsView, infoIExpect: pokemonInfoIExpect)
     }
-    private func setupPokemonMoves(){
+    private func assignTypeToPokemon(){
         switch pokemonInfoIExpect.types.count {
         case 1:
             pokemonType1.text = pokemonInfoIExpect.types[0].type.name
@@ -43,6 +44,16 @@ class PokemonDetailController: UIViewController {
         default:
             showAlert(alertTitle: "Type Issue", alertMessage: "No Types Avaible for a caertain pokemon", alertStyle: .alert)
         }
+    }
+    private func setupPokemonStats(myView view: StatsView, infoIExpect info: PokemonInfo){
+            view.speedValue.text = "Speed \(info.stats[0].baseStat)"
+            view.specialAttackValue.text = "Special Attack \(info.stats[1].baseStat)"
+            view.specialDefenseValue.text = "Special Defense \(info.stats[2].baseStat)"
+            view.defenseValue.text = "Defense \(info.stats[3].baseStat)"
+            view.attackValue.text = "Attack \(info.stats[4].baseStat)"
+            view.hpValue.text = "HP \(info.stats[5].baseStat)"
+    }
+    private func setupPokemonMoves(myView view: MovesView){
     }
     private func setupPokemonImage(){
         let id = pokemonInfoIExpect.id
