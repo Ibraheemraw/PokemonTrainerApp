@@ -28,5 +28,4 @@ extension UIViewController {
         alertController.addAction(cancel)
         self.present(alertController, animated: true, completion: nil)
     }
-    public func savePokemonToPartyAlert(){}
 }

@@ -7,96 +7,112 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "87461CA3-B9E6-4DA6-B34C-BC2FA4FAA9E9"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PokedexPro/Controllers/MainController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
-            landmarkName = "collectionView(_:didSelectItemAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8CB77076-0F29-49B2-BE51-30DF748D52A1"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PokedexPro/Controllers/MainController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "segueToDetailVC(myPath:myCollection:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F3CC3B81-FF6D-4D3D-9F69-2EA8EC290012"
+            uuid = "A0891E70-03E0-4D3D-AA22-812FB120E0C7"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PokedexPro/Controllers/PokemonDetailController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "savePokemonToPokedexAlert(pokemonName:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "AE3B6638-EB70-4186-808A-C4A1BC3F249C"
+            uuid = "6C530379-C32E-4DBE-88D4-5E1415AD2427"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PokedexPro/Controllers/PokemonDetailController.swift"
+            filePath = "PokedexPro/SwiftyHelpers/ItemsDataManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "assginValuesToOutlets()"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "saveItemToDocumentsDirectory(item:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6C530379-C32E-4DBE-88D4-5E1415AD2427 - 5dc12d0dbb4c58bd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PokedexPro.ItemsDataManager.saveItemToDocumentsDirectory(item: A) -&gt; ()"
+                  moduleName = "PokedexPro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ibraheem.r/Documents/PokedexPro/PokedexPro/SwiftyHelpers/ItemsDataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "1054">
+               </Location>
+               <Location
+                  uuid = "6C530379-C32E-4DBE-88D4-5E1415AD2427 - 5dc12d0dbb4c58bd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PokedexPro.ItemsDataManager.saveItemToDocumentsDirectory(item: A) -&gt; ()"
+                  moduleName = "PokedexPro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ibraheem.r/Documents/PokedexPro/PokedexPro/SwiftyHelpers/ItemsDataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "1197">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A210B9F5-A79F-4927-84D2-4973DB950D99"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PokedexPro/SwiftyHelpers/ItemsDataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "saveItemToDocumentsDirectory(item:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "306B9B1F-A4C8-48F3-B62E-D6039F8D785D"
+            uuid = "5FB71A6C-2D98-4ACB-90EB-3B1CDBB01495"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PokedexPro/Controllers/PokemonDetailController.swift"
+            filePath = "PokedexPro/Controllers/PokedexController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "assignTypeToPokemon()"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "collectionView(_:numberOfItemsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A2978787-B5C4-41BA-8F09-A6906ADED639"
+            uuid = "36C70FFD-C725-4FE7-97C0-FF84B80E2E48"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PokedexPro/Controllers/PokemonDetailController.swift"
+            filePath = "PokedexPro/Controllers/PokedexController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "assignTypeToPokemon()"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "collectionView(_:numberOfItemsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

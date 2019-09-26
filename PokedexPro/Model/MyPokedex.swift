@@ -1,8 +1,8 @@
 import Foundation
 
-struct MyPokedex: Codable {
+struct MyPokedex: Codable, Equatable {
     let nameofPokemon: String
     let type1: String
     let type2: String
-    let pokemonImage: Data
+    let pokemonImage: URL
 }

@@ -10,6 +10,7 @@ final class ItemsDataManager<T: Codable> where T: Equatable {
     do {
       let data = try PropertyListEncoder().encode(items)
       try data.write(to: path, options: Data.WritingOptions.atomic)
+        print(path)
     } catch {
       print("property list decoding error: \(error)")
     }

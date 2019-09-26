@@ -6,6 +6,8 @@ final class FileManagerHelper {
   }
   
   static public func filepathToDocumentsDirectory(filename name: String) -> URL {
-    return documentsDirectory().appendingPathComponent(name)
+    let path = documentsDirectory().appendingPathComponent(name)
+    print(path)
+    return path
   }
 }
