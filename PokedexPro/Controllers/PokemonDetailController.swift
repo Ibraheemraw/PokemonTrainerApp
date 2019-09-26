@@ -32,6 +32,7 @@ class PokemonDetailController: UIViewController {
         assignTypeToPokemon()
         setupPokemonImage()
         setupPokemonStats(myView: statsView, infoIExpect: pokemonInfoIExpect)
+        setupPokemonMoves(myView: movesView, infoIExpect: pokemonInfoIExpect)
     }
     private func assignTypeToPokemon(){
         switch pokemonInfoIExpect.types.count {
@@ -53,7 +54,11 @@ class PokemonDetailController: UIViewController {
             view.attackValue.text = "Attack \(info.stats[4].baseStat)"
             view.hpValue.text = "HP \(info.stats[5].baseStat)"
     }
-    private func setupPokemonMoves(myView view: MovesView){
+    private func setupPokemonMoves(myView view: MovesView, infoIExpect info: PokemonInfo){
+        view.move1.setTitle("\(info.moves[0].move.name)", for: .normal)
+        view.move2.setTitle("\(info.moves[1].move.name)", for: .normal)
+        view.move3.setTitle("\(info.moves[2].move.name)", for: .normal)
+        view.move4.setTitle("\(info.moves[3].move.name)", for: .normal)
     }
     private func setupPokemonImage(){
         let id = pokemonInfoIExpect.id
