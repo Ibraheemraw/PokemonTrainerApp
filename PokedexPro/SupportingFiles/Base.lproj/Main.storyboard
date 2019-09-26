@@ -417,6 +417,11 @@
                                                 <constraint firstItem="t2j-4Z-dfu" firstAttribute="leading" secondItem="VPY-yT-IBD" secondAttribute="leadingMargin" constant="83" id="y0s-g8-Zh5"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="id" destination="Pbw-ls-5Lk" id="oYT-GY-Wrn"/>
+                                            <outlet property="pokemonImage" destination="koL-HT-7Tc" id="2cq-8k-asr"/>
+                                            <outlet property="pokemonName" destination="DN0-Kr-Fes" id="Z6V-yI-MVj"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="rightCell" rowHeight="225" id="EmW-0f-WsT" customClass="RightPokemonCell" customModule="PokedexPro" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="227" width="375" height="225"/>
@@ -492,6 +497,11 @@
                                                 <constraint firstItem="ZXf-8e-SWr" firstAttribute="trailing" secondItem="PjK-BI-kD2" secondAttribute="trailingMargin" id="sXD-Zj-NTR"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="id" destination="5Pg-Ax-wz2" id="JsU-tT-Qn4"/>
+                                            <outlet property="pokemonImage" destination="3lf-Ee-ZDu" id="fKQ-Zz-Mzn"/>
+                                            <outlet property="pokemonName" destination="QjO-31-agV" id="Ud0-8s-4SX"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
