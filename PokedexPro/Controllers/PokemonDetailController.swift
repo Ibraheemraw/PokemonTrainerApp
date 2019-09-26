@@ -6,21 +6,8 @@ class PokemonDetailController: UIViewController {
     @IBOutlet weak var pokemonType1: UILabel!
     @IBOutlet weak var pokemonType2: UILabel!
     @IBOutlet weak var imageOfPokemon: UIImageView!
-    
-    @IBOutlet weak var movesContent: UIView!
-    @IBOutlet weak var statsContent: UIView!
-    
-    @IBOutlet weak var move1: UIButton!
-    @IBOutlet weak var move2: UIButton!
-    @IBOutlet weak var move3: UIButton!
-    @IBOutlet weak var move4: UIButton!
-    
-    @IBOutlet weak var speed:UILabel!
-    @IBOutlet weak var specialDefense:UILabel!
-    @IBOutlet weak var specialAttack:UILabel!
-    @IBOutlet weak var defense:UILabel!
-    @IBOutlet weak var attack:UILabel!
-    @IBOutlet weak var hp:UILabel!
+    @IBOutlet weak var statsView: StatsView!
+    @IBOutlet weak var movesView: MovesView!
     public var pokemonInfoIExpect: PokemonInfo!
     public var pokemonIExpect: Pokemon!
     override var canBecomeFirstResponder: Bool{
@@ -30,7 +17,7 @@ class PokemonDetailController: UIViewController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        callMethods()
+      //  callMethods()
     }
     
     // MARK: - Actions and Methods
@@ -81,11 +68,11 @@ class PokemonDetailController: UIViewController {
     @IBAction func segmentedControlWasTapped(_ sender: UISegmentedControl){
         switch sender.selectedSegmentIndex {
         case 0:
-            movesContent.alpha = 1
-            statsContent.alpha = 0
+            statsView.contentView.alpha = 1
+            movesView.contentView.alpha = 0
         case 1:
-            movesContent.alpha = 0
-            statsContent.alpha = 1
+            statsView.contentView.alpha = 0
+            movesView.contentView.alpha = 1
         default:
             print("no option was selected")
         }
