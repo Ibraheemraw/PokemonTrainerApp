@@ -27,15 +27,29 @@ class MainController: UIViewController {
         callMethods()
     }
     // MARK: - Actions and Methods
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let destination = segue.destination as? PokemonDetailController {
-//            if searchBarIsEmpty{
-//                segeueToPokemonDetailVC(segueIdentifier: segue, myDestination: destination, pokemonCollection: pokemon)
-//            } else {
-//                segeueToPokemonDetailVC(segueIdentifier: segue, myDestination: destination, pokemonCollection: searchedPokemon)
-//            }
-//        }
-//    }
+    private func segueToDetailVC(myPath indexPath: IndexPath, myCollection collection: [Pokemon]){
+        
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        guard let pokemonDetailController = storyBoard.instantiateViewController(withIdentifier: "PokemonDetailController") as? PokemonDetailController else {
+            showAlert(alertTitle: "Pushing VC Alert", alertMessage: "Id issue checking spelling", alertStyle: .alert)
+            return
+        }
+        let pokemonSelected = collection[indexPath.row]
+        pokemonDetailController.pokemonIExpect = pokemonSelected
+        PokeApiClient.fetchPokemonEntryInfo(pokemonUrl: pokemonSelected.pokemonUrl.absoluteString) { [weak self] (result) in
+            switch result{
+            case .success(let info):
+                DispatchQueue.main.async {
+                   pokemonDetailController.pokemonInfoIExpect = info
+                    self?.navigationController?.pushViewController(pokemonDetailController, animated: true)
+                }
+            case .failure(let error):
+                DispatchQueue.main.async {
+                    self?.showAlert(alertTitle: "Fetcing Data Error", alertMessage: "\(error)", alertStyle: .alert)
+                }
+            }
+        }
+    }
     private func callMethods(){
         setupOutlets()
         fetchData()
@@ -66,48 +80,7 @@ class MainController: UIViewController {
         layout.itemSize = CGSize(width: width, height: width)
         pokemonCollectionView.layer.cornerRadius = 5
     }
-    private func segeueToPokemonDetailVC(myDestination destination: PokemonDetailController, pokemonCollection collection: [Pokemon], myPath indexPath: IndexPath){
-       let storyBaord = UIStoryboard(name: "Main", bundle: nil)
-        guard let sourceVC = storyBaord.instantiateViewController(identifier: "MainController") as? MainController, let destinationVC = storyBaord.instantiateViewController(identifier: "PokemonDetailController") as? PokemonDetailController else {
-            showAlert(alertTitle: "Error with VC ids", alertMessage: "Check storybaord and see if the ids match", alertStyle: .alert)
-            return
-        }
-       let segeue = UIStoryboardSegue(identifier: "showDetail", source: sourceVC, destination: destinationVC)
-        if segeue.identifier == "showPokemonDetail" {
-            let pokemonSelected = collection[indexPath.row].self
-            destination.pokemonIExpect = pokemonSelected
-            PokeApiClient.fetchPokemonEntryInfo(pokemonUrl: pokemonSelected.pokemonUrl.absoluteString){ [weak self]
-                (result) in
-                switch result {
-                case .success(let info):
-                    DispatchQueue.main.async {
-                        destination.pokemonInfoIExpect = info
-                        self?.performSegue(withIdentifier: "showDetail", sender: nil)
-                    }
-                case .failure(let error):
-                    DispatchQueue.main.async {
-                        self?.showAlert(alertTitle: "Fetcing Data Error", alertMessage: "\(error)", alertStyle: .alert)
-                    }
-                }
-            }
-        }
-    }
-//    private func setupSegeueInfo(pokemonList list: [Pokemon], myPath indexPath: IndexPath, myDestination destination: PokemonDetailController){
-//        let pokemonSelected = list[indexPath.row]
-//        destination.pokemonIExpect = pokemonSelected
-//        PokeApiClient.fetchPokemonEntryInfo(pokemonUrl: pokemonSelected.pokemonUrl.absoluteString)  { [weak self] (result) in
-//            switch result {
-//            case .success(let info):
-//                DispatchQueue.main.async {
-//                    destination.pokemonInfoIExpect = info
-//                }
-//            case .failure(let error):
-//                DispatchQueue.main.async {
-//                    self?.showAlert(alertTitle: "Fetcing Data Error", alertMessage: "\(error)", alertStyle: .alert)
-//                }
-//            }
-//        }
-//    }
+
     private func setupCell(myCell cell: PokemonCell, pokemonList list: [Pokemon],myPath indexPath: IndexPath){
         let settingCells = list[indexPath.row]
         cell.pokemonName.text = settingCells.name
@@ -162,16 +135,11 @@ extension MainController: UICollectionViewDataSource {
 
 extension MainController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let storyBaord = UIStoryboard(name: "Main", bundle: nil)
-        guard let detailVC =  storyBaord.instantiateViewController(withIdentifier: "PokemonDetailController") as? PokemonDetailController else {
-            showAlert(alertTitle: "DidSelect Issue", alertMessage: "Misspelled ID in DidSelect", alertStyle: .alert)
-            return
-        }
-        if searchBarIsEmpty{
-       segeueToPokemonDetailVC(myDestination: detailVC, pokemonCollection: pokemon, myPath: indexPath)
-            } else {
-       segeueToPokemonDetailVC(myDestination: detailVC, pokemonCollection: searchedPokemon, myPath: indexPath)
-        }
+    if searchBarIsEmpty {
+        segueToDetailVC(myPath: indexPath, myCollection: pokemon)
+               } else {
+        segueToDetailVC(myPath: indexPath, myCollection: searchedPokemon)
+               }
     }
 }
 

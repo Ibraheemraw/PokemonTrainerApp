@@ -7,13 +7,13 @@ class PokemonDetailController: UIViewController {
     @IBOutlet weak var pokemonType2: UILabel!
     @IBOutlet weak var imageOfPokemon: UIImageView!
     
-    @IBOutlet weak var movesContainerView: UIView!
-    @IBOutlet weak var statsContainerView:UIView!
+    @IBOutlet weak var movesContent: UIView!
+    @IBOutlet weak var statsContent: UIView!
     
-    @IBOutlet weak var move1: UILabel!
-    @IBOutlet weak var move2: UILabel!
-    @IBOutlet weak var move3: UILabel!
-    @IBOutlet weak var move4: UILabel!
+    @IBOutlet weak var move1: UIButton!
+    @IBOutlet weak var move2: UIButton!
+    @IBOutlet weak var move3: UIButton!
+    @IBOutlet weak var move4: UIButton!
     
     @IBOutlet weak var speed:UILabel!
     @IBOutlet weak var specialDefense:UILabel!
@@ -81,11 +81,11 @@ class PokemonDetailController: UIViewController {
     @IBAction func segmentedControlWasTapped(_ sender: UISegmentedControl){
         switch sender.selectedSegmentIndex {
         case 0:
-            movesContainerView.alpha = 1
-            statsContainerView.alpha = 0
+            movesContent.alpha = 1
+            statsContent.alpha = 0
         case 1:
-            movesContainerView.alpha = 0
-            statsContainerView.alpha = 1
+            movesContent.alpha = 0
+            statsContent.alpha = 1
         default:
             print("no option was selected")
         }
