@@ -17,7 +17,7 @@ class PokemonDetailController: UIViewController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-      //  callMethods()
+        callMethods()
     }
     
     // MARK: - Actions and Methods
@@ -34,10 +34,10 @@ class PokemonDetailController: UIViewController {
     }
     private func setupPokemonMoves(){
         switch pokemonInfoIExpect.types.count {
-        case 0:
+        case 1:
             pokemonType1.text = pokemonInfoIExpect.types[0].type.name
             pokemonType2.text = ""
-        case 1:
+        case 2:
            pokemonType1.text = pokemonInfoIExpect.types[0].type.name
            pokemonType2.text = pokemonInfoIExpect.types[1].type.name
         default:
