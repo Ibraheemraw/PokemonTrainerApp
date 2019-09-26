@@ -2,7 +2,7 @@ import UIKit
 
 class PartyController: UIViewController {
     // MARK: - Outlets and Properties
-
+    #warning("fix contraints")
     @IBOutlet weak var tableView: UITableView!
     private var pokemon = [MyPokemonParty](){
         didSet{
@@ -34,7 +34,7 @@ extension PartyController: UITableViewDataSource{
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let myPokemon = pokemonDataManager.fetchItemsFromDocumentsDirectory()[indexPath.row]
-        if indexPath.row % 1 == 0 {
+        if indexPath.row % 2 != 0 {
            guard let cell = tableView.dequeueReusableCell(withIdentifier: "leftCell") as? LeftPokemonCell else {
             showAlert(alertTitle: "ID Alert", alertMessage: "issue with the cell", alertStyle: .alert)
             return UITableViewCell()
