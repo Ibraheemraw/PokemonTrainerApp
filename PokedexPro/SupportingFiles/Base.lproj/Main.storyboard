@@ -241,7 +241,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XmR-Qp-ALq">
                                 <rect key="frame" x="0.0" y="100" width="375" height="518"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MHw-1s-9oo">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MHw-1s-9oo">
                                     <size key="itemSize" width="274" height="190"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -275,23 +275,23 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZN0-DR-8qc">
-                                                    <rect key="frame" x="174" y="160" width="92" height="21"/>
+                                                    <rect key="frame" x="190" y="160" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="ZN0-DR-8qc" firstAttribute="top" secondItem="Zsj-a5-KMN" secondAttribute="bottom" constant="14" id="QNf-my-PJL"/>
                                                 <constraint firstAttribute="trailing" secondItem="Gsq-dU-vSy" secondAttribute="trailing" constant="168" id="RIa-rL-fbL"/>
                                                 <constraint firstItem="Zsj-a5-KMN" firstAttribute="top" secondItem="Yc2-TM-UbA" secondAttribute="bottom" constant="10" id="YFk-wu-qfb"/>
                                                 <constraint firstItem="Gsq-dU-vSy" firstAttribute="leading" secondItem="8qI-Qd-Ac6" secondAttribute="leading" constant="14" id="YU5-RE-tBd"/>
-                                                <constraint firstItem="ZN0-DR-8qc" firstAttribute="top" secondItem="Zsj-a5-KMN" secondAttribute="bottom" constant="14" id="ZgF-cB-H1E"/>
                                                 <constraint firstItem="Yc2-TM-UbA" firstAttribute="leading" secondItem="8qI-Qd-Ac6" secondAttribute="leading" constant="8" id="cW1-Kb-mlx"/>
                                                 <constraint firstAttribute="trailing" secondItem="Yc2-TM-UbA" secondAttribute="trailing" constant="8" id="hr0-Bd-LWn"/>
-                                                <constraint firstItem="ZN0-DR-8qc" firstAttribute="leading" secondItem="Gsq-dU-vSy" secondAttribute="trailing" constant="68" id="nNN-qd-5v1"/>
+                                                <constraint firstItem="ZN0-DR-8qc" firstAttribute="leading" secondItem="Gsq-dU-vSy" secondAttribute="trailing" constant="84" id="mL0-q9-6GA"/>
                                                 <constraint firstItem="Gsq-dU-vSy" firstAttribute="top" secondItem="Zsj-a5-KMN" secondAttribute="bottom" constant="15" id="pur-mx-GDu"/>
-                                                <constraint firstAttribute="trailing" secondItem="ZN0-DR-8qc" secondAttribute="trailing" constant="8" id="q2Q-Pk-Ali"/>
                                                 <constraint firstItem="Yc2-TM-UbA" firstAttribute="top" secondItem="8qI-Qd-Ac6" secondAttribute="top" id="t7B-dW-nrT"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ZN0-DR-8qc" secondAttribute="trailing" constant="20" symbolic="YES" id="vz6-KC-CNM"/>
                                                 <constraint firstAttribute="trailing" secondItem="Zsj-a5-KMN" secondAttribute="trailing" constant="80" id="zgb-Qg-agh"/>
                                             </constraints>
                                         </collectionViewCellContentView>

@@ -26,6 +26,10 @@ class PokedexController: UIViewController {
         super.viewDidLoad()
         callMethods()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        fetchPokemon()
+    }
     // MARK: - Actions and Methods
     private func callMethods(){
         setupOutLets()
