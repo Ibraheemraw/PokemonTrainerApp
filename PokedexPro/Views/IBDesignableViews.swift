@@ -6,7 +6,6 @@ class CircularButton: UIButton {
     super.layoutSubviews()
     imageView?.contentMode = .scaleAspectFill
     layer.cornerRadius = bounds.width / 2.0
-    layer.borderColor = UIColor.lightGray.cgColor
     layer.borderWidth = 0.5
     clipsToBounds = true
   }
@@ -28,7 +27,6 @@ class CircularView: UIImageView {
     super.layoutSubviews()
     contentMode = .scaleAspectFill
     layer.cornerRadius = bounds.width / 2.0
-    layer.borderColor = UIColor.lightGray.cgColor
     layer.borderWidth = 0.5
     clipsToBounds = true
   }
@@ -40,7 +38,6 @@ class CornerButton: UIButton {
     super.layoutSubviews()
     imageView?.contentMode = .scaleAspectFill
     layer.cornerRadius = 6.0
-    layer.borderColor = UIColor.black.cgColor
     layer.borderWidth = 0.5
     clipsToBounds = true
   }
