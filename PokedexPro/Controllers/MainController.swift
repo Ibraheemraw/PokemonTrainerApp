@@ -94,6 +94,7 @@ class MainController: UIViewController {
                     switch info.types.count {
                     case 1:
                        cell.type1.text = info.types[0].type.name
+                       cell.type1.textAlignment = .center
                         cell.type2.text = ""
                     case 2:
                         cell.type1.text = info.types[0].type.name
