@@ -580,6 +580,7 @@
                     <navigationItem key="navigationItem" id="TPz-iL-Qee"/>
                     <connections>
                         <outlet property="trainerBio" destination="q7M-wk-7Yl" id="RX7-ls-KCf"/>
+                        <outlet property="trainerCardView" destination="ZJ3-05-t1Y" id="vJT-AM-MQ8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gjx-Ys-Nh7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -2,12 +2,9 @@ import UIKit
 
 class TrainerProfileController: UIViewController {
     // MARK: - Outlets and Properties
-    @IBOutlet weak var profileImageView: CircularImageView!
+    @IBOutlet weak var trainerCardView: TrainerCardView!
     
-    @IBOutlet weak var trainerName: UILabel!
-    @IBOutlet weak var trainerRegion: UILabel!
-    @IBOutlet weak var numberOfPokemonDiscovered: UILabel!
-    @IBOutlet weak var numberOfbadgesEarned: UILabel!
+
     @IBOutlet weak var trainerBio: UITextView!
     public var numOfbadges = ""
     private var pokedexDataManager = ItemsDataManager<MyPokedex>()
@@ -20,28 +17,26 @@ class TrainerProfileController: UIViewController {
     
     // MARK: - Actions and Methods
     private func callMethods(){
-        fetchPokedexData()
+       fetchPokedexData()
         showNumberOfPokemonFound()
     }
     private func fetchPokedexData(){
         self.pokedex = pokedexDataManager.fetchItemsFromDocumentsDirectory()
     }
     private func showNumberOfPokemonFound(){
-        numberOfPokemonDiscovered.text = "\(pokedexDataManager.fetchItemsFromDocumentsDirectory().count)"
+        trainerCardView.pokedexCount.text = "Pokedex Count: \(pokedexDataManager.fetchItemsFromDocumentsDirectory().count)"
     }
     @IBAction func unwindFromEditTrainerProfileController(_ segue: UIStoryboardSegue){
         let editTPC = segue.source as! EditTrainerProfileController
         #warning("connect the properties from the edit to the main profile")
-        trainerName.text = "Name: \(editTPC.username)"
-        trainerRegion.text = "Region: \(editTPC.region)"
-        numberOfPokemonDiscovered.text = "Pokedex Count: THIS IS FOR WHEN YOU FAVORITE"
+        trainerCardView.trainerName.text = "Name: \(editTPC.username)"
+        trainerCardView.region.text = "Region: \(editTPC.region)"
         numOfbadges = editTPC.numOfBadges
-        trainerName.text = editTPC.username
-        trainerRegion.text = editTPC.region
         trainerBio.text = editTPC.trainerBio
+        trainerCardView.trainerProfileImage.image = editTPC.userProfileImage
     }
     private func setBackgrougnColor(){
-        guard let region = trainerRegion.text, !region.isEmpty else {
+        guard let region = trainerCardView.region.text, !region.isEmpty else {
             return
         }
         switch region {
