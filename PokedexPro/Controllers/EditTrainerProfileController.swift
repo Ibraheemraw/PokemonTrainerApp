@@ -135,9 +135,6 @@ extension EditTrainerProfileController: UITextFieldDelegate {
         }
         return true
     }
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        usernameField.becomeFirstResponder()
-    }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         guard let username = usernameField.text, let region = regionField.text, let trainerBio = bioTextView.text, !username.isEmpty, !region.isEmpty, !trainerBio.isEmpty else {
             showAlert(alertTitle: "Field Issues", alertMessage: "Please fill out all feilds", alertStyle: .alert)

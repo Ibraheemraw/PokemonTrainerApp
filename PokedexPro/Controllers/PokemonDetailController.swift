@@ -10,13 +10,13 @@ class PokemonDetailController: UIViewController {
     @IBOutlet weak var movesView: MovesView!
     public var pokemonInfoIExpect: PokemonInfo!
     public var pokemonIExpect: Pokemon!
+    private var appBackgroundColor = UIColor()
     override var canBecomeFirstResponder: Bool{
         return true
     }
     let pokedexDataManager = ItemsDataManager<MyPokedex>()
     let partyDataManager = ItemsDataManager<MyPokemonParty>()
     // MARK: - Life Cycle
-    #warning("Fix Constraint issues")
     override func viewDidLoad() {
         super.viewDidLoad()
         callMethods()
@@ -31,7 +31,7 @@ class PokemonDetailController: UIViewController {
     }
     private func setbackgroundColor(){
         guard let nameOfpokemonType = pokemonType1.text, !nameOfpokemonType.isEmpty else {return}
-        PocketMonsterCell.setDetailViewBackgroundColor(viewController: self, pocketMonsterType: nameOfpokemonType)
+        PocketMonsterCell.setDetailViewBackgroundColor(viewController: self, pocketMonsterType: nameOfpokemonType, myView: movesView)
     }
     private func assginValuesToOutlets(){
         nameOfPokemon.text =  pokemonIExpect.name
