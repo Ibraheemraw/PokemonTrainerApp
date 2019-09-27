@@ -45,6 +45,7 @@ class PokemonDetailController: UIViewController {
         case 1:
             pokemonType1.text = pokemonInfoIExpect.types[0].type.name
             pokemonType2.text = ""
+            pokemonType1.textAlignment = .center
         case 2:
            pokemonType1.text = pokemonInfoIExpect.types[0].type.name
            pokemonType2.text = pokemonInfoIExpect.types[1].type.name
@@ -53,12 +54,12 @@ class PokemonDetailController: UIViewController {
         }
     }
     private func setupPokemonStats(myView view: StatsView, infoIExpect info: PokemonInfo){
-            view.speedValue.text = "Speed \(info.stats[0].baseStat)"
-            view.specialAttackValue.text = "Special Attack \(info.stats[1].baseStat)"
-            view.specialDefenseValue.text = "Special Defense \(info.stats[2].baseStat)"
-            view.defenseValue.text = "Defense \(info.stats[3].baseStat)"
-            view.attackValue.text = "Attack \(info.stats[4].baseStat)"
-            view.hpValue.text = "HP \(info.stats[5].baseStat)"
+            view.speedValue.text = "Speed: \(info.stats[0].baseStat)"
+            view.specialAttackValue.text = "Special Attack: \(info.stats[1].baseStat)"
+            view.specialDefenseValue.text = "Special Defense: \(info.stats[2].baseStat)"
+            view.defenseValue.text = "Defense: \(info.stats[3].baseStat)"
+            view.attackValue.text = "Attack: \(info.stats[4].baseStat)"
+            view.hpValue.text = "HP: \(info.stats[5].baseStat)"
     }
     private func setupPokemonMoves(myView view: MovesView, infoIExpect info: PokemonInfo){
         view.move1.setTitle("\(info.moves[0].move.name)", for: .normal)

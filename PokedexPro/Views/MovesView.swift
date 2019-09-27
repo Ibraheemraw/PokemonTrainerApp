@@ -20,4 +20,14 @@ class MovesView: UIView {
            contentView.frame = bounds
            contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
        }
+    private func setupButtonUI(){
+        move1.setGradient(cgColors: CGColor.fire)
+        move1.layer.cornerRadius = 6
+        move2.setGradient(cgColors: CGColor.fire)
+        move2.layer.cornerRadius = 6
+        move3.setGradient(cgColors: CGColor.fire)
+        move3.layer.cornerRadius = 6
+        move4.setGradient(cgColors: CGColor.fire)
+        move4.layer.cornerRadius = 6
+    }
 }
