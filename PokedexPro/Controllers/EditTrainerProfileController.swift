@@ -16,7 +16,7 @@ class EditTrainerProfileController: UIViewController {
     public var userProfileImage: UIImage?
     public var username = ""
     public var region = ""
-    public var numOfBadges = 0
+    public var numOfBadges = ""
     public var trainerBio = ""
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -81,6 +81,16 @@ class EditTrainerProfileController: UIViewController {
     @objc private func viewDidTapped(){
         view.endEditing(true)
     }
+    private func gatherUserInput(){
+        guard let username = usernameField.text, !username.isEmpty, let region = regionField.text, !region.isEmpty, let trainerBio = bioTextView.text, !trainerBio.isEmpty, let numOfBadges = numberOfBadgesLabel.text, !numOfBadges.isEmpty else {
+            return
+        }
+        userProfileImage = profileImageView.image
+        self.username = username
+        self.region = region
+        self.numOfBadges = numOfBadges
+        self.trainerBio = trainerBio
+    }
 
     @IBAction func changeProfileImage(_ sender: UIButton) {
         setupImagePicker()
@@ -90,6 +100,7 @@ class EditTrainerProfileController: UIViewController {
         numberOfBadgesLabel.text = String(Int(sender.value))
     }
     @IBAction func saveBttnTapped(_ sender: CornerButton) {
+        gatherUserInput()
          performSegue(withIdentifier: "Unwind from EditTrainerProfileController", sender: self)
         self.dismiss(animated: true, completion: nil)
     }
