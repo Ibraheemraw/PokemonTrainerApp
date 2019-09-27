@@ -129,6 +129,7 @@ extension MainController: UICollectionViewDataSource {
         } else {
             setupCell(myCell: pokemonCell, pokemonList: searchedPokemon, myPath: indexPath)
         }
+        pokemonCell.layer.cornerRadius = 6
         return pokemonCell
     }
 }
