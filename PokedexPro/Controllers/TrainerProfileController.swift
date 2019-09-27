@@ -60,27 +60,27 @@ class TrainerProfileController: UIViewController {
             break
         }
     }
-    private func setupBadgeImage(numberOfBadges badges: String){
-        #warning("setup badges with the images")
-        switch badges {
-        case "1":
-            <#code#>
-        case "2":
-            <#code#>
-        case "3":
-            <#code#>
-        case "4":
-            <#code#>
-        case "5":
-            <#code#>
-        case "6":
-            <#code#>
-        case "7":
-            <#code#>
-        case "8":
-            <#code#>
-        default:
-            break
-        }
-    }
+//    private func setupBadgeImage(numberOfBadges badges: String){
+//        #warning("setup badges with the images")
+//        switch badges {
+//        case "1":
+//            <#code#>
+//        case "2":
+//            <#code#>
+//        case "3":
+//            <#code#>
+//        case "4":
+//            <#code#>
+//        case "5":
+//            <#code#>
+//        case "6":
+//            <#code#>
+//        case "7":
+//            <#code#>
+//        case "8":
+//            <#code#>
+//        default:
+//            break
+//        }
+//    }
 }

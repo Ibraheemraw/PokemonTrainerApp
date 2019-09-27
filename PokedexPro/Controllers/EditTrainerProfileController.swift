@@ -3,6 +3,7 @@ import Toucan
 
 class EditTrainerProfileController: UIViewController {
     // MARK: - Outlets and Properties
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var profileImageView: CircularImageView!
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var regionField: UITextField!
@@ -21,17 +22,22 @@ class EditTrainerProfileController: UIViewController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        usernameField.isEnabled = true
         callMethods()
     }
     // MARK: - Actions and Methods
     private func callMethods(){
+        setupScrollView()
         setupOutlets()
         setupPickerView()
         createToolBar()
         setupTapGesture()
         setupTextFieldInput()
+        enableUsernameField()
     }
-
+    private func setupScrollView(){
+        scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height+500)
+    }
     private func setupOutlets(){
         usernameField.delegate = self
         regionField.delegate = self
@@ -71,6 +77,7 @@ class EditTrainerProfileController: UIViewController {
     }
 
     @objc private func doneBttnPressed(){
+        usernameField.isEnabled = true
         regionField.resignFirstResponder()
     }
 
@@ -104,6 +111,11 @@ class EditTrainerProfileController: UIViewController {
          performSegue(withIdentifier: "Unwind from EditTrainerProfileController", sender: self)
         self.dismiss(animated: true, completion: nil)
     }
+    private func enableUsernameField(){
+        if usernameField.isSelected {
+            usernameField.isEnabled = true
+        }
+    }
 }
 // MARK: - Extensions
 extension EditTrainerProfileController: UITextFieldDelegate {
@@ -124,7 +136,9 @@ extension EditTrainerProfileController: UITextFieldDelegate {
         return true
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        guard let username = usernameField.text, let region = regionField.text, let trainerBio = bioTextView.text, !username.isEmpty, !region.isEmpty, !trainerBio.isEmpty else { return false }
+        guard let username = usernameField.text, let region = regionField.text, let trainerBio = bioTextView.text, !username.isEmpty, !region.isEmpty, !trainerBio.isEmpty else {
+            showAlert(alertTitle: "Field Issues", alertMessage: "Please fill out all feilds", alertStyle: .alert)
+            return false }
         self.username = username
         self.region = region
         self.trainerBio = trainerBio
@@ -140,6 +154,9 @@ extension EditTrainerProfileController: UITextViewDelegate {
             textView.resignFirstResponder()
         }
         return true
+    }
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        textView.text = ""
     }
 }
 
