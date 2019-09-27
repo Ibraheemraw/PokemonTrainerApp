@@ -20,6 +20,7 @@ class MainController: UIViewController {
             }
         }
     }
+    public var pokemonInfo: PokemonInfo!
     private var searchBarIsEmpty = true
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -27,6 +28,7 @@ class MainController: UIViewController {
         callMethods()
     }
     // MARK: - Actions and Methods
+
     private func segueToDetailVC(myPath indexPath: IndexPath, myCollection collection: [Pokemon]){
         
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
@@ -89,6 +91,8 @@ class MainController: UIViewController {
             switch result {
             case .success(let info):
                 DispatchQueue.main.async {
+                    cell.type1.textColor = .white
+                    cell.type2.textColor = .white
                     switch info.types.count {
                     case 1:
                        cell.type1.text = info.types[0].type.name
@@ -102,6 +106,7 @@ class MainController: UIViewController {
                     let pokemonID = info.id
                     let url = URL(string: "https://pokeres.bastionbot.org/images/pokemon/\(pokemonID).png")
                     cell.pokemonImg.kf.setImage(with: url)
+                    PocketMonsterCell.setCellColor(myCell: cell, pocketMonsterType: info.types[0].type.name)
                 }
             case .failure(let error):
                 DispatchQueue.main.async {

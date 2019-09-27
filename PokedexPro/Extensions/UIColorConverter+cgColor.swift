@@ -32,15 +32,16 @@ extension UIColor {
     static let groundType = UIColor(hexString: "#DFC068")
     static let electricType = UIColor(hexString: "#F7D030")
     static let bugType = UIColor(hexString: "#A9B820")
-    static let fightinglype = UIColor(hexString: "#C03028")
+    static let fightingType = UIColor(hexString: "#C03028")
     static let psychicType = UIColor(hexString: "#F75888")
-    static let rocklType = UIColor(hexString: "#B8A038")
+    static let rockType = UIColor(hexString: "#B8A038")
     static let poisonType = UIColor(hexString: "#A040A0")
-    static let darklType = UIColor(hexString: "#6F5848")
+    static let darkType = UIColor(hexString: "#6F5848")
     static let flyingType = UIColor(hexString: "#A890F0")
     static let steelType = UIColor(hexString: "#B8B8D0")
     static let ghostType = UIColor(hexString: "#705898")
     static let dragonType = UIColor(hexString: "#7038F8")
+    static let iceType = UIColor(hexString: "#98D8D8")
     // Black
     static let lightBlack = UIColor(hexString: "434343")!
     // Gray
