@@ -27,6 +27,11 @@ class PokemonDetailController: UIViewController {
         setupImageSettings()
         callGestures()
         assginValuesToOutlets()
+        setbackgroundColor()
+    }
+    private func setbackgroundColor(){
+        guard let nameOfpokemonType = pokemonType1.text, !nameOfpokemonType.isEmpty else {return}
+        PocketMonsterCell.setDetailViewBackgroundColor(viewController: self, pocketMonsterType: nameOfpokemonType)
     }
     private func assginValuesToOutlets(){
         nameOfPokemon.text =  pokemonIExpect.name
@@ -98,7 +103,6 @@ class PokemonDetailController: UIViewController {
         let ac = UIAlertController(title: "Adding to Your party!!!", message: "You are about to add \(name) to your party. Are you sure you want to do this?", preferredStyle: .alert)
         let yes = UIAlertAction(title: "Yes", style: .default) {[weak self] (yes) in
             guard let id = self?.pokemonInfoIExpect.id, let url = URL(string: "https://pokeres.bastionbot.org/images/pokemon/\(id).png") else {
-                self?.showAlert(alertTitle: "No Picture", alertMessage: "Pokemon does not have any picture", alertStyle: .alert)
                 return
             }
             let pokemon = MyPokemonParty(pokemonID: id, nameOfPokemon: name, pokemonImage: url)
@@ -124,7 +128,7 @@ class PokemonDetailController: UIViewController {
                 let pokemonEntry = MyPokedex(nameofPokemon: name, type1: self!.pokemonInfoIExpect.types[0].type.name, type2: self!.pokemonInfoIExpect.types[1].type.name, pokemonImage: url)
                 self?.pokedexDataManager.saveItemToDocumentsDirectory(item: pokemonEntry)
             default:
-                self?.showAlert(alertTitle: "Type Issue", alertMessage: "No Types Avaible for a caertain pokemon", alertStyle: .alert)
+                break
             }
         }
         let no = UIAlertAction(title: "No", style: .cancel, handler: nil)

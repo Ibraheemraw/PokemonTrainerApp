@@ -91,8 +91,6 @@ class MainController: UIViewController {
             switch result {
             case .success(let info):
                 DispatchQueue.main.async {
-                    cell.type1.textColor = .white
-                    cell.type2.textColor = .white
                     switch info.types.count {
                     case 1:
                        cell.type1.text = info.types[0].type.name

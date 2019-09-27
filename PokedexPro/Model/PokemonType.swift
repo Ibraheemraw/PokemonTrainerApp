@@ -62,4 +62,44 @@ struct PocketMonsterCell {
             break
         }
     }
+    static public func setDetailViewBackgroundColor(viewController controller: PokemonDetailController, pocketMonsterType type: String){
+        switch controller.pokemonType1.text {
+        case PocketMonsterTypes.normal.rawValue:
+            controller.view.layer.backgroundColor = UIColor.normalType?.cgColor
+        case PocketMonsterTypes.fire.rawValue:
+             controller.view.layer.backgroundColor = UIColor.fireType?.cgColor
+        case PocketMonsterTypes.fighting.rawValue:
+             controller.view.layer.backgroundColor = UIColor.fightingType?.cgColor
+        case PocketMonsterTypes.water.rawValue:
+             controller.view.layer.backgroundColor = UIColor.waterType?.cgColor
+        case PocketMonsterTypes.flying.rawValue:
+             controller.view.layer.backgroundColor = UIColor.flyingType?.cgColor
+        case PocketMonsterTypes.grass.rawValue:
+             controller.view.layer.backgroundColor = UIColor.grassType?.cgColor
+        case PocketMonsterTypes.poison.rawValue:
+             controller.view.layer.backgroundColor = UIColor.poisonType?.cgColor
+        case PocketMonsterTypes.electric.rawValue:
+             controller.view.layer.backgroundColor = UIColor.electricType?.cgColor
+        case PocketMonsterTypes.ground.rawValue:
+             controller.view.layer.backgroundColor = UIColor.groundType?.cgColor
+        case PocketMonsterTypes.psychic.rawValue:
+             controller.view.layer.backgroundColor = UIColor.psychicType?.cgColor
+        case PocketMonsterTypes.rock.rawValue:
+             controller.view.layer.backgroundColor = UIColor.rockType?.cgColor
+        case PocketMonsterTypes.ice.rawValue:
+             controller.view.layer.backgroundColor = UIColor.iceType?.cgColor
+        case PocketMonsterTypes.bug.rawValue:
+             controller.view.layer.backgroundColor = UIColor.bugType?.cgColor
+        case PocketMonsterTypes.dragon.rawValue:
+             controller.view.layer.backgroundColor = UIColor.dragonType?.cgColor
+        case PocketMonsterTypes.ghost.rawValue:
+             controller.view.layer.backgroundColor = UIColor.ghostType?.cgColor
+        case PocketMonsterTypes.dark.rawValue:
+             controller.view.layer.backgroundColor = UIColor.darkType?.cgColor
+        case PocketMonsterTypes.steel.rawValue:
+             controller.view.layer.backgroundColor = UIColor.steelType?.cgColor
+        default:
+            break
+        }
+    }
 }
