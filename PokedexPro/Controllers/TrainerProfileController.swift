@@ -14,11 +14,14 @@ class TrainerProfileController: UIViewController {
         super.viewDidLoad()
         callMethods()
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        setBackgrougnColor()
+    }
     // MARK: - Actions and Methods
     private func callMethods(){
        fetchPokedexData()
-        showNumberOfPokemonFound()
+       showNumberOfPokemonFound()
     }
     private func fetchPokedexData(){
         self.pokedex = pokedexDataManager.fetchItemsFromDocumentsDirectory()
@@ -34,21 +37,21 @@ class TrainerProfileController: UIViewController {
         }
         switch region {
         case "Kanto":
-            print("Yellow pickachu")
+            view.setGradient(cgColors: CGColor.golds)
         case "Johto":
-            print("Gray for lugia")
+            view.setGradient(cgColors: CGColor.grays)
         case "Hoenn":
-            print("green for requaza")
+            view.setGradient(cgColors: CGColor.greens)
         case "Sinnoh":
-            print("print pink for palkia")
+            view.setGradient(cgColors: CGColor.pinks)
         case "Unova":
-            print("black")
+            view.setGradient(cgColors: CGColor.blacks)
         case "Kalos":
-            print("print red")
+            view.setGradient(cgColors: CGColor.reds)
         case "Alola":
-            print("blue")
+            view.setGradient(cgColors: CGColor.blues)
         case "Galar":
-            print("sky blue")
+            view.setGradient(cgColors: CGColor.ices)
         default:
             break
         }

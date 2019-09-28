@@ -108,4 +108,13 @@ extension CGColor {
     static let ghosts = [UIColor.ghostType!.cgColor, UIColor.black.cgColor]
     static let dragons = [UIColor.dragonType!.cgColor, UIColor.black.cgColor]
     static let ices = [UIColor.blueberry.cgColor, UIColor.bluejay.cgColor]
+    static let blacks  = [UIColor.black.cgColor, UIColor.lightBlack.cgColor]
+       static let grays   = [UIColor.stone.cgColor, UIColor.cloudy.cgColor]
+       static let reds    = [UIColor.bloodRed.cgColor, UIColor.tomato.cgColor]
+       static let oranges = [UIColor.bloodOrange.cgColor, UIColor.tangerine.cgColor]
+       static let blues   = [UIColor.blueberry.cgColor, UIColor.bluejay.cgColor]
+       static let greens  = [UIColor.clover.cgColor, UIColor.limerick.cgColor]
+       static let golds   = [UIColor.marigold.cgColor, UIColor.mustard.cgColor]
+       static let purples = [UIColor.violet.cgColor, UIColor.amethyst.cgColor]
+       static let pinks   = [UIColor.pink.cgColor, UIColor.lightPink.cgColor]
 }
