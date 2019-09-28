@@ -133,14 +133,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f4J-cV-zP5" customClass="CornerView" customModule="PokedexPro" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="279" width="375" height="666"/>
                                 <subviews>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="MJ0-VL-oWJ">
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MJ0-VL-oWJ">
                                         <rect key="frame" x="8" y="122.5" width="359" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="31" id="wxU-g5-l5s"/>
                                         </constraints>
                                         <segments>
-                                            <segment title="Moves"/>
                                             <segment title="Stats"/>
+                                            <segment title="Moves"/>
                                         </segments>
                                         <connections>
                                             <action selector="segmentedControlWasTapped:" destination="ZBh-BL-gzx" eventType="valueChanged" id="SDd-oh-3bh"/>

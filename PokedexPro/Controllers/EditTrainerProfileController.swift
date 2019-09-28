@@ -118,7 +118,6 @@ class EditTrainerProfileController: UIViewController {
 }
 // MARK: - Extensions
 extension EditTrainerProfileController: UITextFieldDelegate {
-    #warning("Issue with textfields please fix, cannot type in to save entry")
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         currentTextField = textField
         if textField == regionField {
@@ -137,7 +136,6 @@ extension EditTrainerProfileController: UITextFieldDelegate {
         return true
     }
 }
-#warning("Set up text view logic")
 extension EditTrainerProfileController: UITextViewDelegate {
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         guard let trainerBio = bioTextView.text, !trainerBio.isEmpty else { return false }
