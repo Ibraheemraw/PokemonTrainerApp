@@ -29,11 +29,20 @@ class EditTrainerProfileController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         gatherUserInput()
         let destintationVC = segue.destination as! TrainerProfileController
-        destintationVC.trainerCardView.trainerName.text = username
-        destintationVC.trainerCardView.trainerProfileImage.image = userProfileImage
-        destintationVC.trainerCardView.region.text = region
-        destintationVC.numOfbadges = numOfBadges
-        destintationVC.trainerBio.text = trainerBio
+        if username.isEmpty || userProfileImage == nil || region.isEmpty || numOfBadges.isEmpty || trainerBio.isEmpty {
+            destintationVC.trainerCardView.trainerName.text = "Trainer"
+            destintationVC.trainerCardView.trainerProfileImage.image = UIImage(named: "pokemon-trainer-1")
+            destintationVC.numOfbadges = "0"
+            destintationVC.trainerCardView.region.text = "Unova"
+            Region.setBackgrougnColor(myRegion: "Unova", trainerCardView: destintationVC.trainerCardView, myView: destintationVC.view)
+        } else {
+            destintationVC.trainerCardView.trainerName.text = username
+            destintationVC.trainerCardView.trainerProfileImage.image = userProfileImage
+            destintationVC.trainerCardView.region.text = region
+            destintationVC.numOfbadges = numOfBadges
+            destintationVC.trainerBio.text = trainerBio
+            Region.setBackgrougnColor(myRegion: region, trainerCardView: destintationVC.trainerCardView, myView: destintationVC.view)
+        }
     }
     private func callMethods(){
         setupScrollView()
@@ -160,7 +169,7 @@ extension EditTrainerProfileController: UIImagePickerControllerDelegate,UINaviga
             userProfileImage = resizedImage.image
             self.profileImageView.image = userProfileImage
         } else {
-            showAlert(alertTitle: "Error", alertMessage: "Orignal image is nil", alertStyle: .alert)
+            showAlert(alertTitle: "Error", alertMessage: "No Image Found", alertStyle: .alert)
         }
          dismiss(animated: true, completion: nil)
     }

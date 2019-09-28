@@ -1,7 +1,7 @@
 import UIKit
 
 class TrainerCardView: UIView {
-    @IBOutlet var contentView: UIView!
+    @IBOutlet var contentView: CornerView!
     @IBOutlet weak var trainerName: UILabel!
     @IBOutlet weak var region: UILabel!
     @IBOutlet weak var pokedexCount: UILabel!

@@ -47,7 +47,7 @@ class CornerView: UIView {
   override func layoutSubviews() {
     super.layoutSubviews()
     self.contentMode = .scaleAspectFill
-    layer.cornerRadius = 30.0
+    layer.cornerRadius = 6.0
     clipsToBounds = true
   }
 }

@@ -10,7 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TrainerCardView" customModule="PokedexPro" customModuleProvider="target">
             <connections>
                 <outlet property="bottomBannerCard" destination="Pbv-gl-u41" id="nfq-EP-GCS"/>
-                <outlet property="contentView" destination="iN0-l3-epB" id="qGS-XZ-v4l"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="cHl-h8-3rb"/>
                 <outlet property="eigthBadge" destination="wYI-Hl-0q3" id="sGQ-3E-cP2"/>
                 <outlet property="fifthBadge" destination="geY-77-TPP" id="h7a-XK-UwO"/>
                 <outlet property="firstBadge" destination="7KS-9m-eVX" id="CID-O5-7w6"/>
@@ -27,7 +27,7 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CornerView" customModule="PokedexPro" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="343" height="316"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -37,7 +37,7 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYE-JA-Oph">
                             <rect key="frame" x="8" y="6" width="327" height="29"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                            <nil key="textColor"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
@@ -126,7 +126,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
                         </imageView>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="0hW-G4-PXM" secondAttribute="bottom" id="BVh-9b-1yL"/>
                         <constraint firstAttribute="trailing" secondItem="0hW-G4-PXM" secondAttribute="trailing" id="Ksj-hK-Erz"/>
@@ -161,7 +161,7 @@
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="PIu-Ib-qMc" firstAttribute="top" secondItem="4Rf-GU-8Ad" secondAttribute="bottom" constant="8" id="150-er-ndV"/>
                 <constraint firstItem="PIu-Ib-qMc" firstAttribute="leading" secondItem="YWG-hx-BCj" secondAttribute="trailing" constant="8" id="2Vk-1y-Scd"/>
