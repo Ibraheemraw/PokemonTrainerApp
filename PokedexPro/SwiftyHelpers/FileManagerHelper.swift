@@ -5,7 +5,9 @@ final class FileManagerHelper {
     return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
   }
   
-  static public func filepathToDocumentsDirectory(filename: String) -> URL {
-    return documentsDirectory().appendingPathComponent(filename)
+  static public func filepathToDocumentsDirectory(filename name: String) -> URL {
+    let path = documentsDirectory().appendingPathComponent(name)
+    print(path)
+    return path
   }
 }

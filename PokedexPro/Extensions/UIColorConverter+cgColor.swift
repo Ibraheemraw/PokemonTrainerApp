@@ -24,11 +24,29 @@ extension UIColor {
 }
 
 extension UIColor {
+    //Pokemon color type
+    static let normalType = UIColor(hexString: "#A8A878")
+    static let fireType = UIColor(hexString: "#F08030")
+    static let grassType = UIColor(hexString: "#78C84F")
+    static let waterType = UIColor(hexString: "#6790F0")
+    static let groundType = UIColor(hexString: "#DFC068")
+    static let electricType = UIColor(hexString: "#F7D030")
+    static let bugType = UIColor(hexString: "#A9B820")
+    static let fightingType = UIColor(hexString: "#C03028")
+    static let psychicType = UIColor(hexString: "#F75888")
+    static let rockType = UIColor(hexString: "#B8A038")
+    static let poisonType = UIColor(hexString: "#A040A0")
+    static let darkType = UIColor(hexString: "#6F5848")
+    static let flyingType = UIColor(hexString: "#A890F0")
+    static let steelType = UIColor(hexString: "#B8B8D0")
+    static let ghostType = UIColor(hexString: "#705898")
+    static let dragonType = UIColor(hexString: "#7038F8")
+    static let iceType = UIColor(hexString: "#98D8D8")
     // Black
     static let lightBlack = UIColor(hexString: "434343")!
     // Gray
-    static let stone     = UIColor(hexString: "868f96")!
-    static let cloudy    = UIColor(hexString: "d7d2cc")!
+    static let stone     = UIColor(hexString: "#D7DDE8")!
+    static let cloudy    = UIColor(hexString: "#757F9A")!
     static let fog       = UIColor(hexString: "ebedee")!
     // Purple
     static let indigo    = UIColor(hexString: "3f5efb")!
@@ -67,16 +85,36 @@ extension UIColor {
     static let pink      = UIColor(hexString: "ec77ab")!
     static let lightPink = UIColor(hexString: "f4c4f3")!
     static let candy     = UIColor(hexString: "e5b2ca")!
+    // White
+    static let sutleWhite      = UIColor(hexString: "#ECE9E6")!
+    static let fullWhite = UIColor(hexString: "#FFFFFF")!
 }
 
 extension CGColor {
+    static let darks  = [UIColor.darkType!.cgColor, UIColor.black.cgColor]
+    static let steels   = [UIColor.steelType!.cgColor, UIColor.black.cgColor]
+    static let fires    = [UIColor.fireType!.cgColor, UIColor.black.cgColor]
+    static let normals = [UIColor.normalType!.cgColor, UIColor.black.cgColor]
+    static let grasses   = [UIColor.grassType!.cgColor, UIColor.black.cgColor]
+    static let waters  = [UIColor.waterType!.cgColor, UIColor.black.cgColor]
+    static let grounds   = [UIColor.groundType!.cgColor, UIColor.black.cgColor]
+    static let electrics = [UIColor.electricType!.cgColor, UIColor.black.cgColor]
+    static let bugs   = [UIColor.bugType!.cgColor, UIColor.black.cgColor]
+    static let fightings = [UIColor.fightingType!.cgColor, UIColor.black.cgColor]
+    static let psychics = [UIColor.psychicType!.cgColor, UIColor.black.cgColor]
+    static let rocks = [UIColor.rockType!.cgColor, UIColor.black.cgColor]
+    static let poisons = [UIColor.poisonType!.cgColor, UIColor.black.cgColor]
+    static let flyings = [UIColor.flyingType!.cgColor, UIColor.black.cgColor]
+    static let ghosts = [UIColor.ghostType!.cgColor, UIColor.black.cgColor]
+    static let dragons = [UIColor.dragonType!.cgColor, UIColor.black.cgColor]
+    static let ices = [UIColor.blueberry.cgColor, UIColor.bluejay.cgColor]
     static let blacks  = [UIColor.black.cgColor, UIColor.lightBlack.cgColor]
-    static let grays   = [UIColor.stone.cgColor, UIColor.cloudy.cgColor]
-    static let reds    = [UIColor.bloodRed.cgColor, UIColor.tomato.cgColor]
-    static let oranges = [UIColor.bloodOrange.cgColor, UIColor.tangerine.cgColor]
-    static let blues   = [UIColor.blueberry.cgColor, UIColor.bluejay.cgColor]
-    static let greens  = [UIColor.clover.cgColor, UIColor.limerick.cgColor]
-    static let golds   = [UIColor.marigold.cgColor, UIColor.mustard.cgColor]
-    static let purples = [UIColor.violet.cgColor, UIColor.amethyst.cgColor]
-    static let pinks   = [UIColor.pink.cgColor, UIColor.lightPink.cgColor]
+       static let grays   = [UIColor.stone.cgColor, UIColor.cloudy.cgColor]
+       static let reds    = [UIColor.bloodRed.cgColor, UIColor.tomato.cgColor]
+       static let oranges = [UIColor.bloodOrange.cgColor, UIColor.tangerine.cgColor]
+       static let blues   = [UIColor.blueberry.cgColor, UIColor.bluejay.cgColor]
+       static let greens  = [UIColor.clover.cgColor, UIColor.limerick.cgColor]
+       static let golds   = [UIColor.marigold.cgColor, UIColor.mustard.cgColor]
+       static let purples = [UIColor.violet.cgColor, UIColor.amethyst.cgColor]
+       static let pinks   = [UIColor.pink.cgColor, UIColor.lightPink.cgColor]
 }
