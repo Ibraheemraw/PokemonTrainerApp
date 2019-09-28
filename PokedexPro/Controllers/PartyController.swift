@@ -44,7 +44,6 @@ extension PartyController: UITableViewDataSource{
             return UITableViewCell()
             }
             cell.pokemonName.text = myPokemon.nameOfPokemon
-            cell.id.text = "\(myPokemon.pokemonID)"
             cell.pokemonImage.kf.setImage(with: myPokemon.pokemonImage)
             return cell
         } else {
@@ -53,7 +52,6 @@ extension PartyController: UITableViewDataSource{
             return UITableViewCell()
             }
             cell.pokemonName.text = myPokemon.nameOfPokemon
-            cell.id.text = "\(myPokemon.pokemonID)"
             cell.pokemonImage.kf.setImage(with: myPokemon.pokemonImage)
             return cell
         }
