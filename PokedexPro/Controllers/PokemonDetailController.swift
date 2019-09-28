@@ -76,8 +76,12 @@ class PokemonDetailController: UIViewController {
         imageOfPokemon.isUserInteractionEnabled = true
     }
     private func callGestures(){
-        setupLongPressGesture()
-        setupTepGesture()
+        if FlagFeature.isPokemonPartyTabReady == false {
+          setupLongPressGesture()
+        } else {
+            setupLongPressGesture()
+            setupTepGesture()
+        }
     }
     private func setupLongPressGesture(){
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPressAction))

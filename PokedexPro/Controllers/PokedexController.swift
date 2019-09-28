@@ -25,6 +25,7 @@ class PokedexController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         callMethods()
+        self.view.setGradient(cgColors: CGColor.grays)
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -69,10 +70,6 @@ extension PokedexController: UISearchBarDelegate {
     }
 }
 
-extension PokedexController: UICollectionViewDelegate {
-    
-}
-
 extension PokedexController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let pokedexCell = collectionView.dequeueReusableCell(withReuseIdentifier: "pokedexCell", for: indexPath) as? PokedexCell else {
@@ -99,7 +96,10 @@ extension PokedexController: UICollectionViewDataSource {
                 pokedexCell.type2.text = pokedexEntry.type2
             }
             pokedexCell.pokemonImage.kf.setImage(with: pokedexEntry.pokemonImage)
+            PocketMonsterCell.setupPokdexCell(myCell: pokedexCell, pocketMonsterType: pokedexEntry.type1)
         }
+        pokedexCell.layer.cornerRadius = 6
+        pokedexCell.setGradient(cgColors: CGColor.reds)
         return pokedexCell
     }
 
@@ -111,4 +111,19 @@ extension PokedexController: UICollectionViewDataSource {
         }
     }
 }
-
+extension PokedexController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let alertController = UIAlertController(title: "Delete Discovery", message: "Would you like to delete this pokemon?", preferredStyle: .actionSheet)
+        let yes = UIAlertAction(title: "Yes", style: .default) { [weak self] (yes) in
+            guard let mypokemonEntry = self?.entries[indexPath.row] else {
+                return
+            }
+        self?.pokedexDataManager.deleteItem(atIndex: indexPath.row, item: mypokemonEntry)
+            self?.pokedexCollectionView.reloadData()
+        }
+        let no = UIAlertAction(title: "No", style: .cancel, handler: nil)
+        alertController.addAction(yes)
+        alertController.addAction(no)
+        present(alertController, animated: true, completion: nil)
+    }
+}

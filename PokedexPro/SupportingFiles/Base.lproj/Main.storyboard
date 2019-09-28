@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main Controller-->
+        <!--Pokemon-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="MainController" id="BYZ-38-t0r" customClass="MainController" customModule="PokedexPro" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,7 +22,7 @@
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wxr-Fm-UCa">
                                 <rect key="frame" x="0.0" y="100" width="375" height="518"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="E5R-lI-gHO">
                                     <size key="itemSize" width="215" height="176"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -93,7 +93,7 @@
                                 </cells>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" red="0.8730652266100174" green="0.87194638078842235" blue="0.89148983041647123" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="t0E-NT-Wm0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="HNm-EF-Vh2"/>
                             <constraint firstItem="t0E-NT-Wm0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="RrP-iw-JCC"/>
@@ -105,7 +105,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Lhr-W2-tWB"/>
+                    <navigationItem key="navigationItem" title="Pokemon" id="Lhr-W2-tWB"/>
                     <connections>
                         <outlet property="pokemonCollectionView" destination="wxr-Fm-UCa" id="kVE-oX-vBk"/>
                         <outlet property="searchBar" destination="t0E-NT-Wm0" id="fdS-pi-bg0"/>
@@ -130,7 +130,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f4J-cV-zP5" customClass="CornerView" customModule="PokedexPro" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f4J-cV-zP5" customClass="PokemonDetailCornerView" customModule="PokedexPro" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="279" width="375" height="666"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MJ0-VL-oWJ">
@@ -228,7 +228,7 @@
             </objects>
             <point key="canvasLocation" x="2364" y="912.5937031484259"/>
         </scene>
-        <!--Pokedex Controller-->
+        <!--Pokedex-->
         <scene sceneID="ONU-lU-Qy5">
             <objects>
                 <viewController storyboardIdentifier="PokedexController" id="Org-iL-mM7" customClass="PokedexController" customModule="PokedexPro" customModuleProvider="target" sceneMemberID="viewController">
@@ -242,7 +242,7 @@
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XmR-Qp-ALq">
                                 <rect key="frame" x="0.0" y="100" width="375" height="518"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MHw-1s-9oo">
                                     <size key="itemSize" width="274" height="190"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -309,7 +309,7 @@
                                 </cells>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" red="0.87306522659999997" green="0.87194638079999998" blue="0.89148983039999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="EPg-dB-SNf" firstAttribute="bottom" secondItem="XmR-Qp-ALq" secondAttribute="bottom" id="Bh3-kc-Jab"/>
                             <constraint firstItem="XmR-Qp-ALq" firstAttribute="leading" secondItem="EPg-dB-SNf" secondAttribute="leading" id="QIx-2R-0Yf"/>
@@ -321,7 +321,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EPg-dB-SNf"/>
                     </view>
-                    <navigationItem key="navigationItem" id="hmT-HH-xWf"/>
+                    <navigationItem key="navigationItem" title="Pokedex" id="hmT-HH-xWf"/>
                     <connections>
                         <outlet property="pokedexCollectionView" destination="XmR-Qp-ALq" id="U7q-mv-oWW"/>
                         <outlet property="searchBar" destination="a2S-MJ-fuj" id="G7H-1h-17w"/>
@@ -481,7 +481,7 @@
             </objects>
             <point key="canvasLocation" x="5605.6000000000004" y="125.4872563718141"/>
         </scene>
-        <!--Trainer Profile Controller-->
+        <!--Trainer-->
         <scene sceneID="gn0-A3-Qsi">
             <objects>
                 <viewController storyboardIdentifier="TrainerProfileController" id="Ndl-xE-pz6" customClass="TrainerProfileController" customModule="PokedexPro" customModuleProvider="target" sceneMemberID="viewController">
@@ -535,7 +535,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yUf-lr-BBF"/>
                     </view>
-                    <navigationItem key="navigationItem" id="TPz-iL-Qee"/>
+                    <navigationItem key="navigationItem" title="Trainer" id="TPz-iL-Qee"/>
                     <connections>
                         <outlet property="trainerBio" destination="q7M-wk-7Yl" id="RX7-ls-KCf"/>
                         <outlet property="trainerCardView" destination="ZJ3-05-t1Y" id="vJT-AM-MQ8"/>

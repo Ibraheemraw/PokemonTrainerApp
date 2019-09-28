@@ -52,6 +52,15 @@ class CornerView: UIView {
   }
 }
 
+class PokemonDetailCornerView: UIView {
+  override func layoutSubviews() {
+    super.layoutSubviews()
+    self.contentMode = .scaleAspectFill
+    layer.cornerRadius = 30.0
+    clipsToBounds = true
+  }
+}
+
 @IBDesignable
 class CornerImageView: UIImageView {
   override func layoutSubviews() {

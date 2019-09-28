@@ -26,6 +26,7 @@ class MainController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         callMethods()
+        self.view.setGradient(cgColors: CGColor.grays)
     }
     // MARK: - Actions and Methods
 
