@@ -1,6 +1,7 @@
 import UIKit
 import Kingfisher
 import Toucan
+import AVFoundation
 
 class MainController: UIViewController {
     // MARK: - Outlets and Properties
@@ -21,6 +22,7 @@ class MainController: UIViewController {
         }
     }
     public var pokemonInfo: PokemonInfo!
+    public var audioPlayer = AVAudioPlayer()
     private var searchBarIsEmpty = true
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -29,7 +31,22 @@ class MainController: UIViewController {
         self.view.setGradient(cgColors: CGColor.grays)
     }
     // MARK: - Actions and Methods
-
+    private func playSong(){
+        setupBackgroundMusic()
+        audioPlayer.play()
+        audioPlayer.numberOfLoops = 1000
+    }
+    private func setupBackgroundMusic(){
+        do {
+            guard let url = Bundle.main.path(forResource: "themeSong", ofType: "mp3") else {
+                return
+            }
+            audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: url))
+            audioPlayer.prepareToPlay()
+        } catch {
+            print("error: \(error)")
+        }
+    }
     private func segueToDetailVC(myPath indexPath: IndexPath, myCollection collection: [Pokemon]){
         
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
@@ -54,6 +71,7 @@ class MainController: UIViewController {
         }
     }
     private func callMethods(){
+        playSong()
         setupOutlets()
         fetchData()
         setupCollectionViewlayout()

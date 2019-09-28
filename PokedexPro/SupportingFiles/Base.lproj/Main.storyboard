@@ -504,7 +504,10 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="BMd-3U-Lxn"/>
                                 </constraints>
-                                <state key="normal" title="Edit"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Edit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="Y20-ih-zrM" kind="show" id="Oim-Bo-rBC"/>
                                 </connections>
@@ -519,24 +522,37 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwA-6w-Tkl">
+                                <rect key="frame" x="16" y="58" width="343" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="speaker.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="musicButtonPressed:" destination="Ndl-xE-pz6" eventType="touchUpInside" id="ssB-BI-2Jp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.87306522659999997" green="0.87194638079999998" blue="0.89148983039999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="q7M-wk-7Yl" firstAttribute="top" secondItem="ZJ3-05-t1Y" secondAttribute="bottom" constant="36" id="Fvf-11-14e"/>
+                            <constraint firstItem="yUf-lr-BBF" firstAttribute="trailing" secondItem="cwA-6w-Tkl" secondAttribute="trailing" constant="16" id="Hcg-Sz-8Rg"/>
                             <constraint firstItem="yUf-lr-BBF" firstAttribute="bottom" secondItem="ZJ3-05-t1Y" secondAttribute="bottom" constant="236" id="KBh-3x-Vck"/>
                             <constraint firstItem="ZJ3-05-t1Y" firstAttribute="top" secondItem="yUf-lr-BBF" secondAttribute="top" constant="66" id="OVL-da-CKV"/>
                             <constraint firstItem="q7M-wk-7Yl" firstAttribute="trailing" secondItem="ZJ3-05-t1Y" secondAttribute="trailing" id="P0u-ca-OZb"/>
                             <constraint firstItem="q7M-wk-7Yl" firstAttribute="leading" secondItem="ZJ3-05-t1Y" secondAttribute="leading" id="YxX-rx-HIK"/>
                             <constraint firstItem="Qkw-b6-A2R" firstAttribute="top" secondItem="q7M-wk-7Yl" secondAttribute="bottom" constant="18" id="aUB-LV-BcZ"/>
                             <constraint firstItem="Qkw-b6-A2R" firstAttribute="leading" secondItem="yUf-lr-BBF" secondAttribute="leading" constant="135" id="dTL-0q-FrL"/>
+                            <constraint firstItem="cwA-6w-Tkl" firstAttribute="leading" secondItem="yUf-lr-BBF" secondAttribute="leading" constant="16" id="gLm-BJ-m2v"/>
                             <constraint firstItem="ZJ3-05-t1Y" firstAttribute="leading" secondItem="yUf-lr-BBF" secondAttribute="leading" constant="16" id="jmL-tR-TIt"/>
                             <constraint firstItem="yUf-lr-BBF" firstAttribute="trailing" secondItem="Qkw-b6-A2R" secondAttribute="trailing" constant="136" id="ss1-Wb-uMy"/>
                             <constraint firstItem="yUf-lr-BBF" firstAttribute="trailing" secondItem="ZJ3-05-t1Y" secondAttribute="trailing" constant="16" id="yyM-vo-zNB"/>
+                            <constraint firstItem="cwA-6w-Tkl" firstAttribute="top" secondItem="yUf-lr-BBF" secondAttribute="top" constant="14" id="zXu-8y-tgU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yUf-lr-BBF"/>
                     </view>
                     <navigationItem key="navigationItem" title="Trainer" id="TPz-iL-Qee"/>
                     <connections>
+                        <outlet property="musicBttn" destination="cwA-6w-Tkl" id="7QD-dq-5Q5"/>
                         <outlet property="trainerBio" destination="q7M-wk-7Yl" id="RX7-ls-KCf"/>
                         <outlet property="trainerCardView" destination="ZJ3-05-t1Y" id="vJT-AM-MQ8"/>
                     </connections>
@@ -557,7 +573,7 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="1299"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Here is where you describe your self as a trainer" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="i8m-GO-LIg">
-                                        <rect key="frame" x="41" y="310" width="293" height="68"/>
+                                        <rect key="frame" x="41" y="316" width="293" height="65"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -571,37 +587,43 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wu5-L8-6R6">
-                                        <rect key="frame" x="82" y="149" width="210" height="30"/>
-                                        <state key="normal" title="Change profile photo"/>
+                                        <rect key="frame" x="82" y="149" width="210" height="36"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="Change profile photo">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="changeProfileImage:" destination="Y20-ih-zrM" eventType="touchUpInside" id="jNV-bp-em4"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex: IbraheemPokemonManster1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fBn-DF-dnZ">
-                                        <rect key="frame" x="41" y="193" width="293" height="34"/>
+                                        <rect key="frame" x="41" y="199" width="293" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many badges do you have?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjH-wH-dap">
-                                        <rect key="frame" x="41" y="399" width="293" height="21"/>
+                                        <rect key="frame" x="41" y="402" width="293" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tap to select the region to are from" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4oi-Go-7wV">
-                                        <rect key="frame" x="41" y="258" width="293" height="34"/>
+                                        <rect key="frame" x="41" y="264" width="293" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="8" translatesAutoresizingMaskIntoConstraints="NO" id="VRk-sV-0oe">
-                                        <rect key="frame" x="141" y="428" width="93" height="32"/>
+                                        <rect key="frame" x="141" y="431" width="93" height="32"/>
                                         <connections>
                                             <action selector="stepperDidPress:" destination="Y20-ih-zrM" eventType="valueChanged" id="9mh-M6-AfR"/>
                                         </connections>
                                     </stepper>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtX-Ad-VIF" customClass="CornerButton" customModule="PokedexPro" customModuleProvider="target">
-                                        <rect key="frame" x="133" y="471" width="109" height="30"/>
-                                        <state key="normal" title="Save"/>
+                                        <rect key="frame" x="133" y="474" width="109" height="36"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="Save">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <segue destination="Jyp-rh-Nzk" kind="unwind" unwindAction="unwindToTrainerVC:" id="loK-PH-z4D"/>
                                         </connections>
@@ -768,5 +790,6 @@
         <image name="icons8-pokedex-50" width="30" height="30"/>
         <image name="pokemon-trainer" width="30" height="30"/>
         <image name="pokemon-trainer-1" width="512" height="512"/>
+        <image name="speaker.fill" catalog="system" width="50" height="64"/>
     </resources>
 </document>

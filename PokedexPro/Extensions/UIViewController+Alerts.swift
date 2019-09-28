@@ -1,4 +1,5 @@
 import UIKit
+import AVFoundation
 
 extension UIViewController {
     public func showAlert(alertTitle title: String?, alertMessage message: String?, alertStyle style: UIAlertController.Style) {
@@ -27,5 +28,19 @@ extension UIViewController {
         alertController.addAction(cameraRollAction)
         alertController.addAction(cancel)
         self.present(alertController, animated: true, completion: nil)
+    }
+    public func turnMusicOnorOfAlert(audioPlayer player: AVAudioPlayer){
+        let ac = UIAlertController(title: "Music", message: "What state do you want the music to be in? On or Off", preferredStyle: .actionSheet)
+        let onState = UIAlertAction(title: "On", style: .default) { (on) in
+            player.play()
+        }
+        let offState = UIAlertAction(title: "Off", style: .default) {(on) in
+            player.stop()
+        }
+        let cancelState = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        ac.addAction(onState)
+        ac.addAction(offState)
+        ac.addAction(cancelState)
+        self.present(ac, animated: true, completion: nil)
     }
 }
