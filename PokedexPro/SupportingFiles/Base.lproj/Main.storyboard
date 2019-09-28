@@ -601,11 +601,8 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="1299"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Here is where you describe your self as a trainer" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="i8m-GO-LIg">
-                                        <rect key="frame" x="41" y="401" width="293" height="68"/>
+                                        <rect key="frame" x="41" y="310" width="293" height="68"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="68" id="4jM-ph-NWf"/>
-                                        </constraints>
                                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -630,7 +627,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many badges do you have?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjH-wH-dap">
-                                        <rect key="frame" x="41" y="314" width="293" height="21"/>
+                                        <rect key="frame" x="41" y="399" width="293" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -641,13 +638,13 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="8" translatesAutoresizingMaskIntoConstraints="NO" id="VRk-sV-0oe">
-                                        <rect key="frame" x="141" y="349" width="93" height="32"/>
+                                        <rect key="frame" x="141" y="428" width="93" height="32"/>
                                         <connections>
                                             <action selector="stepperDidPress:" destination="Y20-ih-zrM" eventType="valueChanged" id="9mh-M6-AfR"/>
                                         </connections>
                                     </stepper>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtX-Ad-VIF" customClass="CornerButton" customModule="PokedexPro" customModuleProvider="target">
-                                        <rect key="frame" x="133" y="491" width="109" height="30"/>
+                                        <rect key="frame" x="133" y="471" width="109" height="30"/>
                                         <state key="normal" title="Save"/>
                                         <connections>
                                             <action selector="saveBttnTapped:" destination="Y20-ih-zrM" eventType="touchUpInside" id="IgA-vM-LnN"/>
@@ -656,31 +653,32 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="wtX-Ad-VIF" firstAttribute="leading" secondItem="FwU-zJ-iOS" secondAttribute="leading" constant="133" id="18s-V0-ean"/>
+                                    <constraint firstItem="VRk-sV-0oe" firstAttribute="top" secondItem="xjH-wH-dap" secondAttribute="bottom" constant="8" id="0JZ-gQ-Ml4"/>
                                     <constraint firstItem="FwU-zJ-iOS" firstAttribute="trailing" secondItem="fBn-DF-dnZ" secondAttribute="trailing" constant="41" id="1kS-oD-t4y"/>
+                                    <constraint firstItem="i8m-GO-LIg" firstAttribute="top" secondItem="4oi-Go-7wV" secondAttribute="bottom" constant="18" id="3IH-zD-Ttb"/>
                                     <constraint firstItem="4oi-Go-7wV" firstAttribute="top" secondItem="fBn-DF-dnZ" secondAttribute="bottom" constant="31" id="5YZ-MS-rTK"/>
                                     <constraint firstItem="wu5-L8-6R6" firstAttribute="top" secondItem="9gz-Ue-T0G" secondAttribute="bottom" constant="13" id="9OO-ZX-1Zo"/>
+                                    <constraint firstItem="wtX-Ad-VIF" firstAttribute="leading" secondItem="FwU-zJ-iOS" secondAttribute="leading" constant="133" id="ADU-AQ-KXD"/>
                                     <constraint firstItem="9gz-Ue-T0G" firstAttribute="leading" secondItem="EwM-U2-Tz9" secondAttribute="leading" constant="129" id="BcV-Xr-Epk"/>
                                     <constraint firstAttribute="bottom" secondItem="9gz-Ue-T0G" secondAttribute="bottom" constant="1163" id="E9D-hI-COR"/>
-                                    <constraint firstItem="FwU-zJ-iOS" firstAttribute="trailing" secondItem="wtX-Ad-VIF" secondAttribute="trailing" constant="133" id="ENj-IC-Nfc"/>
                                     <constraint firstItem="wu5-L8-6R6" firstAttribute="leading" secondItem="FwU-zJ-iOS" secondAttribute="leading" constant="82" id="QbE-1f-OeB"/>
+                                    <constraint firstItem="FwU-zJ-iOS" firstAttribute="trailing" secondItem="xjH-wH-dap" secondAttribute="trailing" constant="41" id="QnN-fr-CNN"/>
+                                    <constraint firstItem="i8m-GO-LIg" firstAttribute="leading" secondItem="FwU-zJ-iOS" secondAttribute="leading" constant="41" id="SKS-28-o3G"/>
+                                    <constraint firstItem="FwU-zJ-iOS" firstAttribute="trailing" secondItem="wtX-Ad-VIF" secondAttribute="trailing" constant="133" id="TAG-dw-jSq"/>
                                     <constraint firstItem="fBn-DF-dnZ" firstAttribute="leading" secondItem="FwU-zJ-iOS" secondAttribute="leading" constant="41" id="TOH-7J-FYe"/>
-                                    <constraint firstItem="VRk-sV-0oe" firstAttribute="top" secondItem="xjH-wH-dap" secondAttribute="bottom" constant="14" id="Txj-As-HmL"/>
-                                    <constraint firstItem="FwU-zJ-iOS" firstAttribute="trailing" secondItem="xjH-wH-dap" secondAttribute="trailing" constant="41" id="V5g-V0-g0d"/>
-                                    <constraint firstItem="xjH-wH-dap" firstAttribute="leading" secondItem="FwU-zJ-iOS" secondAttribute="leading" constant="41" id="Wa6-VW-Ppl"/>
-                                    <constraint firstItem="FwU-zJ-iOS" firstAttribute="trailing" secondItem="VRk-sV-0oe" secondAttribute="trailing" constant="141" id="bTC-XN-4m9"/>
+                                    <constraint firstItem="xjH-wH-dap" firstAttribute="leading" secondItem="FwU-zJ-iOS" secondAttribute="leading" constant="41" id="UYw-BD-I9M"/>
+                                    <constraint firstItem="FwU-zJ-iOS" firstAttribute="trailing" secondItem="VRk-sV-0oe" secondAttribute="trailing" constant="141" id="d0k-j7-cZx"/>
+                                    <constraint firstItem="wtX-Ad-VIF" firstAttribute="top" secondItem="VRk-sV-0oe" secondAttribute="bottom" constant="11" id="dzc-OY-nwd"/>
+                                    <constraint firstItem="HCd-Yq-B03" firstAttribute="bottom" secondItem="wtX-Ad-VIF" secondAttribute="bottom" constant="798" id="l8M-7b-xfa"/>
                                     <constraint firstItem="4oi-Go-7wV" firstAttribute="leading" secondItem="FwU-zJ-iOS" secondAttribute="leading" constant="41" id="lxZ-wq-SSI"/>
                                     <constraint firstItem="fBn-DF-dnZ" firstAttribute="top" secondItem="wu5-L8-6R6" secondAttribute="bottom" constant="14" id="m0d-Rl-awJ"/>
                                     <constraint firstAttribute="trailing" secondItem="9gz-Ue-T0G" secondAttribute="trailing" constant="130" id="mCJ-hZ-zwC"/>
-                                    <constraint firstItem="VRk-sV-0oe" firstAttribute="leading" secondItem="FwU-zJ-iOS" secondAttribute="leading" constant="141" id="mvC-Kv-iMH"/>
+                                    <constraint firstItem="VRk-sV-0oe" firstAttribute="leading" secondItem="FwU-zJ-iOS" secondAttribute="leading" constant="141" id="oaG-dA-X75"/>
                                     <constraint firstItem="FwU-zJ-iOS" firstAttribute="trailing" secondItem="4oi-Go-7wV" secondAttribute="trailing" constant="41" id="p7G-uc-m4T"/>
-                                    <constraint firstItem="xjH-wH-dap" firstAttribute="top" secondItem="4oi-Go-7wV" secondAttribute="bottom" constant="22" id="tZr-w9-Fr3"/>
-                                    <constraint firstItem="i8m-GO-LIg" firstAttribute="top" secondItem="VRk-sV-0oe" secondAttribute="bottom" constant="20" id="uKJ-Yk-b3h"/>
-                                    <constraint firstItem="FwU-zJ-iOS" firstAttribute="trailing" secondItem="i8m-GO-LIg" secondAttribute="trailing" constant="41" id="vmE-Gg-JLb"/>
+                                    <constraint firstItem="xjH-wH-dap" firstAttribute="top" secondItem="i8m-GO-LIg" secondAttribute="bottom" constant="21" id="rdd-kc-ouM"/>
+                                    <constraint firstItem="FwU-zJ-iOS" firstAttribute="trailing" secondItem="i8m-GO-LIg" secondAttribute="trailing" constant="41" id="rew-Me-u9t"/>
                                     <constraint firstItem="FwU-zJ-iOS" firstAttribute="trailing" secondItem="wu5-L8-6R6" secondAttribute="trailing" constant="83" id="wdo-8p-0Ud"/>
-                                    <constraint firstItem="i8m-GO-LIg" firstAttribute="leading" secondItem="FwU-zJ-iOS" secondAttribute="leading" constant="41" id="xKb-aF-ZrE"/>
                                     <constraint firstItem="9gz-Ue-T0G" firstAttribute="top" secondItem="EwM-U2-Tz9" secondAttribute="top" constant="20" id="xLn-Ur-cey"/>
-                                    <constraint firstItem="wtX-Ad-VIF" firstAttribute="top" secondItem="i8m-GO-LIg" secondAttribute="bottom" constant="22" id="za1-KK-KPg"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="FwU-zJ-iOS"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="HCd-Yq-B03"/>

@@ -61,7 +61,6 @@ class EditTrainerProfileController: UIViewController {
         present(imagePickerViewController, animated: true, completion: nil)
     }
     private func createToolBar(){
-        #warning("Issue with pickerview please fix. cannot slide to choose a choice")
         let toolBar = UIToolbar()
                toolBar.barStyle = .default
                toolBar.sizeToFit()
@@ -122,16 +121,9 @@ extension EditTrainerProfileController: UITextFieldDelegate {
     #warning("Issue with textfields please fix, cannot type in to save entry")
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         currentTextField = textField
-        switch textField {
-        case usernameField:
-            guard let username = usernameField.text, !username.isEmpty else {
-                return false }
-            self.username = username
-        case regionField:
-        currentRegionList = Region.regions
-        pickerView.reloadAllComponents()
-        default:
-            print("issue")
+        if textField == regionField {
+            currentRegionList = Region.regions
+            pickerView.reloadAllComponents()
         }
         return true
     }
