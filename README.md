@@ -19,13 +19,15 @@ This is a pokedexApp that helps user's better to understand pokemon and gives th
   * User can add Pokemon to their party (Only up to 6) (Long press)
   * User can add Pokemon to favorites (Double Tap)
   * User can tap to see more detail on the Pokemon 
-  *
+  
 ### Detail View Controller
   * User can see bio, stats, and attacks using the segmented control
   * User can add to favorites with the image at the top (FMO - Double tap to like and save to party)
+
 ### Favorite View Controller
   * User should be able to from favorites 
   * User should be able to search 
+ 
 ### Trainer Profile View Controller
   * User can be able to add a picture 
   * User can be able to select which region are they from 
