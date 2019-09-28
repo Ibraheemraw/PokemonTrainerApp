@@ -26,6 +26,15 @@ class EditTrainerProfileController: UIViewController {
         callMethods()
     }
     // MARK: - Actions and Methods
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        gatherUserInput()
+        let destintationVC = segue.destination as! TrainerProfileController
+        destintationVC.trainerCardView.trainerName.text = username
+        destintationVC.trainerCardView.trainerProfileImage.image = userProfileImage
+        destintationVC.trainerCardView.region.text = region
+        destintationVC.numOfbadges = numOfBadges
+        destintationVC.trainerBio.text = trainerBio
+    }
     private func callMethods(){
         setupScrollView()
         setupOutlets()
@@ -33,7 +42,6 @@ class EditTrainerProfileController: UIViewController {
         createToolBar()
         setupTapGesture()
         setupTextFieldInput()
-        enableUsernameField()
     }
     private func setupScrollView(){
         scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height+500)
@@ -76,7 +84,10 @@ class EditTrainerProfileController: UIViewController {
     }
 
     @objc private func doneBttnPressed(){
-        usernameField.isEnabled = true
+        guard let region = regionField.text, !region.isEmpty else {
+            return
+        }
+        self.region = region
         regionField.resignFirstResponder()
     }
 
@@ -105,16 +116,6 @@ class EditTrainerProfileController: UIViewController {
     @IBAction func stepperDidPress(_ sender: UIStepper) {
         numberOfBadgesLabel.text = String(Int(sender.value))
     }
-    @IBAction func saveBttnTapped(_ sender: CornerButton) {
-        gatherUserInput()
-         performSegue(withIdentifier: "Unwind from EditTrainerProfileController", sender: self)
-        self.dismiss(animated: true, completion: nil)
-    }
-    private func enableUsernameField(){
-        if usernameField.isSelected {
-            usernameField.isEnabled = true
-        }
-    }
 }
 // MARK: - Extensions
 extension EditTrainerProfileController: UITextFieldDelegate {
@@ -127,11 +128,9 @@ extension EditTrainerProfileController: UITextFieldDelegate {
         return true
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        guard let username = usernameField.text, let region = regionField.text, let trainerBio = bioTextView.text, !username.isEmpty, !region.isEmpty, !trainerBio.isEmpty else {
-            showAlert(alertTitle: "Field Issues", alertMessage: "Please fill out all feilds", alertStyle: .alert)
+        guard let username = usernameField.text else {
             return false }
         self.username = username
-        self.region = region
         textField.resignFirstResponder()
         return true
     }
@@ -140,13 +139,13 @@ extension EditTrainerProfileController: UITextViewDelegate {
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         guard let trainerBio = bioTextView.text, !trainerBio.isEmpty else { return false }
         self.trainerBio = trainerBio
-        if (text == "\n") || !text.isEmpty {
+        if (text == "\n") {
             textView.resignFirstResponder()
         }
         return true
     }
-    func textViewDidBeginEditing(_ textView: UITextView) {
-        textView.text = ""
+    func textViewDidEndEditing(_ textView: UITextView) {
+        textView.resignFirstResponder()
     }
 }
 

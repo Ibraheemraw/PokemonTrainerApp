@@ -26,15 +26,8 @@ class TrainerProfileController: UIViewController {
     private func showNumberOfPokemonFound(){
         trainerCardView.pokedexCount.text = "Pokedex Count: \(pokedexDataManager.fetchItemsFromDocumentsDirectory().count)"
     }
-    @IBAction func unwindFromEditTrainerProfileController(_ segue: UIStoryboardSegue){
-        let editTPC = segue.source as! EditTrainerProfileController
-        #warning("connect the properties from the edit to the main profile")
-        trainerCardView.trainerName.text = "Name: \(editTPC.username)"
-        trainerCardView.region.text = "Region: \(editTPC.region)"
-        numOfbadges = editTPC.numOfBadges
-        trainerBio.text = editTPC.trainerBio
-        trainerCardView.trainerProfileImage.image = editTPC.userProfileImage
-    }
+    
+    @IBAction func unwindToTrainerVC(_ sender: UIStoryboardSegue){}
     private func setBackgrougnColor(){
         guard let region = trainerCardView.region.text, !region.isEmpty else {
             return

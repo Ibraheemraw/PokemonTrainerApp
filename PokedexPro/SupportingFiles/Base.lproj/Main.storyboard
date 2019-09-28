@@ -647,8 +647,7 @@
                                         <rect key="frame" x="133" y="471" width="109" height="30"/>
                                         <state key="normal" title="Save"/>
                                         <connections>
-                                            <action selector="saveBttnTapped:" destination="Y20-ih-zrM" eventType="touchUpInside" id="IgA-vM-LnN"/>
-                                            <segue destination="Jyp-rh-Nzk" kind="unwind" unwindAction="unwindFromEditTrainerProfileController:" id="gbU-Lf-NPV"/>
+                                            <segue destination="Jyp-rh-Nzk" kind="unwind" unwindAction="unwindToTrainerVC:" id="loK-PH-z4D"/>
                                         </connections>
                                     </button>
                                 </subviews>
