@@ -12,6 +12,8 @@ This is a pokedexApp that helps user's better to understand pokemon and gives th
 >   * [Detail View Controller](#Detail-View-Controller)
 >   * [Favorite View Controller](#Favorite-View-Controller)
 >   * [Trainer Profile View Controller](#Trainer-Profile-View-Controller)
+>   * [Images Of APP](#Images Of APP)
+
 
 
 ### Home View Controller
@@ -39,5 +41,5 @@ This is a pokedexApp that helps user's better to understand pokemon and gives th
   * User is able to see the Pokedex Number
   * The amount of Pokemon they add to their favorites is the amount they have seen in the in their pokedex
   * User is able to enter in how much money they have 
-
-
+  ### Images Of APP
+![homeView](https://user-images.githubusercontent.com/43886009/65877400-9604c400-e359-11e9-87ee-64d38afaf6f4.png =250x250)
