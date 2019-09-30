@@ -2,7 +2,7 @@
 
 ## About / Synopsis
 
-This is a pokedexApp that helps user's better to understand pokemon and gives them more information on the pokemon and their moves. you can save the pokemon that you see in your Pokedex. I came up with an idea that after the big news about ash finally getting a win. In the show Pokemon it stars him going on a journey meeting new people and pokemon to become a Pokemon Master. His drive to never give up is amazing. He has a high passion for pokemon, battling, and becoming the best version of himself I wanted to incorporate that type of philosophy into my passion for building apps. I am going to keep building apps like this that show off my passion and interests.
+PokedexPro is a fanbase application that allowers users to better understand what kind of pokemon are out there, how strong they are and what kind of moves do they have. Pokemon has been a big discussion ever since the news went out about the anime character Ash Ketchum finally winning a championship. He has been working hard for 22 years to become a Pokemon master; building strong relationships with people and pokemon. I see a lot of myself in Ash because no matter how things turn out no matter how many times I fall I will get back up and try again until I get my win. He has a high passion for pokemon, battling, and becoming the best version of himself I wanted to incorporate that type of philosophy into my passion for building apps. So hopefully this app helps users get a feel of what pokemon is like and how much it has impacted my life.
 
 
 ## Table of contents
