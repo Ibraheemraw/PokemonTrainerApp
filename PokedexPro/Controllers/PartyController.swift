@@ -2,7 +2,6 @@ import UIKit
 
 class PartyController: UIViewController {
     // MARK: - Outlets and Properties
-    #warning("fix contraints")
     @IBOutlet weak var tableView: UITableView!
     private var pokemon = [MyPokemonParty](){
         didSet{
@@ -24,8 +23,15 @@ class PartyController: UIViewController {
 
     // MARK: - Actions and Methods
     private func callMethods(){
-        tableView.dataSource = self
+        setupOutlets()
+        setbacgroundColor()
+    }
+    private func setupOutlets(){
+       tableView.dataSource = self
         tableView.delegate = self
+    }
+    private func setbacgroundColor(){
+        self.view.setGradient(cgColors: CGColor.grays)
     }
     private func fetchPokemon(){
         self.pokemon = pokemonDataManager.fetchItemsFromDocumentsDirectory()
@@ -40,7 +46,6 @@ extension PartyController: UITableViewDataSource{
         let myPokemon = pokemonDataManager.fetchItemsFromDocumentsDirectory()[indexPath.row]
         if indexPath.row % 2 != 0 {
            guard let cell = tableView.dequeueReusableCell(withIdentifier: "leftCell") as? LeftPokemonCell else {
-            showAlert(alertTitle: "ID Alert", alertMessage: "issue with the cell", alertStyle: .alert)
             return UITableViewCell()
             }
             cell.pokemonName.text = myPokemon.nameOfPokemon
@@ -48,7 +53,6 @@ extension PartyController: UITableViewDataSource{
             return cell
         } else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "rightCell") as? RightPokemonCell else {
-            showAlert(alertTitle: "ID Alert", alertMessage: "issue with the cell", alertStyle: .alert)
             return UITableViewCell()
             }
             cell.pokemonName.text = myPokemon.nameOfPokemon

@@ -27,7 +27,6 @@ class CircularView: UIImageView {
     super.layoutSubviews()
     contentMode = .scaleAspectFill
     layer.cornerRadius = bounds.width / 2.0
-    layer.borderWidth = 0.5
     clipsToBounds = true
   }
 }
@@ -48,6 +47,15 @@ class CornerView: UIView {
     super.layoutSubviews()
     self.contentMode = .scaleAspectFill
     layer.cornerRadius = 6.0
+    clipsToBounds = true
+  }
+}
+
+class PokemonDetailCornerView: UIView {
+  override func layoutSubviews() {
+    super.layoutSubviews()
+    self.contentMode = .scaleAspectFill
+    layer.cornerRadius = 30.0
     clipsToBounds = true
   }
 }

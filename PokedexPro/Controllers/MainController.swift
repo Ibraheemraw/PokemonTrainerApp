@@ -1,6 +1,7 @@
 import UIKit
 import Kingfisher
 import Toucan
+import AVFoundation
 
 class MainController: UIViewController {
     // MARK: - Outlets and Properties
@@ -21,19 +22,35 @@ class MainController: UIViewController {
         }
     }
     public var pokemonInfo: PokemonInfo!
+    public var audioPlayer = AVAudioPlayer()
     private var searchBarIsEmpty = true
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         callMethods()
+        self.view.setGradient(cgColors: CGColor.grays)
     }
     // MARK: - Actions and Methods
-
+    private func playSong(){
+        setupBackgroundMusic()
+        audioPlayer.play()
+        audioPlayer.numberOfLoops = 1000
+    }
+    private func setupBackgroundMusic(){
+        do {
+            guard let url = Bundle.main.path(forResource: "themeSong", ofType: "mp3") else {
+                return
+            }
+            audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: url))
+            audioPlayer.prepareToPlay()
+        } catch {
+            print("error: \(error)")
+        }
+    }
     private func segueToDetailVC(myPath indexPath: IndexPath, myCollection collection: [Pokemon]){
         
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         guard let pokemonDetailController = storyBoard.instantiateViewController(withIdentifier: "PokemonDetailController") as? PokemonDetailController else {
-            showAlert(alertTitle: "Pushing VC Alert", alertMessage: "Id issue checking spelling", alertStyle: .alert)
             return
         }
         let pokemonSelected = collection[indexPath.row]
@@ -53,6 +70,7 @@ class MainController: UIViewController {
         }
     }
     private func callMethods(){
+        playSong()
         setupOutlets()
         fetchData()
         setupCollectionViewlayout()
@@ -100,7 +118,7 @@ class MainController: UIViewController {
                         cell.type1.text = info.types[0].type.name
                         cell.type2.text = info.types[1].type.name
                     default:
-                        self?.showAlert(alertTitle: "Type Issue", alertMessage: "No Types Avaible for a caertain pokemon", alertStyle: .alert)
+                       break
                     }
                     let pokemonID = info.id
                     let url = URL(string: "https://pokeres.bastionbot.org/images/pokemon/\(pokemonID).png")
@@ -126,7 +144,6 @@ extension MainController: UICollectionViewDataSource {
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let pokemonCell = collectionView.dequeueReusableCell(withReuseIdentifier: "pokemonCell", for: indexPath) as? PokemonCell else {
-                   showAlert(alertTitle: "Cell Creation Error", alertMessage: "was not able to load the custom cell created", alertStyle: .alert)
                    return UICollectionViewCell() }
         if searchBarIsEmpty {
             setupCell(myCell: pokemonCell, pokemonList: pokemon, myPath: indexPath)

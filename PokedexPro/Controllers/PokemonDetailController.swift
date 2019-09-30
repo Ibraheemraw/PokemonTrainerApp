@@ -50,7 +50,7 @@ class PokemonDetailController: UIViewController {
            pokemonType1.text = pokemonInfoIExpect.types[0].type.name
            pokemonType2.text = pokemonInfoIExpect.types[1].type.name
         default:
-            showAlert(alertTitle: "Type Issue", alertMessage: "No Types Avaible for a caertain pokemon", alertStyle: .alert)
+            break
         }
     }
     private func setupPokemonStats(myView view: StatsView, infoIExpect info: PokemonInfo){
@@ -76,8 +76,12 @@ class PokemonDetailController: UIViewController {
         imageOfPokemon.isUserInteractionEnabled = true
     }
     private func callGestures(){
-        setupLongPressGesture()
-        setupTepGesture()
+        if FlagFeature.isPokemonPartyTabReady == false {
+          setupLongPressGesture()
+        } else {
+            setupLongPressGesture()
+            setupTepGesture()
+        }
     }
     private func setupLongPressGesture(){
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPressAction))
@@ -118,7 +122,6 @@ class PokemonDetailController: UIViewController {
         let ac = UIAlertController(title: "Adding to Your Pokedex!!!", message: "You are about to log \(name) to your Pokedex. Are you sure you want to do this?", preferredStyle: .alert)
         let yes = UIAlertAction(title: "Yes", style: .default) { [weak self] (yes) in
             guard let id = self?.pokemonInfoIExpect.id,let url = URL(string: "https://pokeres.bastionbot.org/images/pokemon/\(id).png") else {
-                 self?.showAlert(alertTitle: "ID Issue", alertMessage: "No ID Avaible for a caertain pokemon", alertStyle: .alert)
                 return
             }
             switch self?.pokemonInfoIExpect.types.count {

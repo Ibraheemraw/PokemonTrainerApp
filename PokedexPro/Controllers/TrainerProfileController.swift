@@ -1,4 +1,5 @@
 import UIKit
+import AVFoundation
 
 class TrainerProfileController: UIViewController {
     // MARK: - Outlets and Properties
@@ -9,6 +10,8 @@ class TrainerProfileController: UIViewController {
     public var numOfbadges = ""
     private var pokedexDataManager = ItemsDataManager<MyPokedex>()
     public var pokedex = [MyPokedex]()
+    public var audioPlayer = AVAudioPlayer()
+    @IBOutlet weak var musicBttn: UIButton!
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +36,14 @@ class TrainerProfileController: UIViewController {
         trainerCardView.layer.cornerRadius = 6
         trainerCardView.bottomBannerCard.setGradient(cgColors: CGColor.grays)
         trainerCardView.topBannerCard.setGradient(cgColors: CGColor.grays)
+        checkMusicButtonState()
+    }
+    private func checkMusicButtonState(){
+        if FlagFeature.isMusicBttnReady == false {
+            musicBttn.isHidden = true
+        } else {
+            musicBttn.isHidden = false
+        }
     }
     private func fetchPokedexData(){
         self.pokedex = pokedexDataManager.fetchItemsFromDocumentsDirectory()
@@ -43,6 +54,9 @@ class TrainerProfileController: UIViewController {
     
     @IBAction func unwindToTrainerVC(_ sender: UIStoryboardSegue){}
     
+    @IBAction func musicButtonPressed(_ sender: UIButton) {
+        turnMusicOnorOfAlert(audioPlayer: audioPlayer)
+    }
     private func setupBadgeImage(numberOfBadges badges: String){
         switch badges {
         case "1":
