@@ -14,6 +14,7 @@ This is a pokedexApp that helps user's better to understand pokemon and gives th
 >   * [Favorite View Controller](#Favorite-View-Controller)
 >   * [Trainer Profile View Controller](#Trainer-Profile-View-Controller)
 >   * [Images Of APP](#Images-Of-APP)
+>   * [Future Mode Implementations](#Future_Mode-Implementations)
 
 ### Frameworks Used
   * AVFoundation
