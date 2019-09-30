@@ -341,7 +341,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OSE-1U-HXf">
                                 <rect key="frame" x="0.0" y="44" width="375" height="623"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="leftCell" rowHeight="199" id="aeF-Vs-7Yi" customClass="LeftPokemonCell" customModule="PokedexPro" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="199"/>
@@ -351,10 +351,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JcP-qY-j0i" customClass="RightPartyPokemonView" customModule="PokedexPro" customModuleProvider="target">
-                                                    <rect key="frame" x="67" y="82" width="240" height="34"/>
+                                                    <rect key="frame" x="67" y="82" width="241" height="35"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sON-hK-YZ6">
-                                                            <rect key="frame" x="8" y="6" width="224" height="21"/>
+                                                            <rect key="frame" x="8" y="6" width="225" height="23"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -362,41 +362,41 @@
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstItem="sON-hK-YZ6" firstAttribute="leading" secondItem="JcP-qY-j0i" secondAttribute="leading" constant="8" id="Gaf-EO-saQ"/>
-                                                        <constraint firstAttribute="trailing" secondItem="sON-hK-YZ6" secondAttribute="trailing" constant="8" id="Z5y-ib-wC9"/>
-                                                        <constraint firstItem="sON-hK-YZ6" firstAttribute="top" secondItem="JcP-qY-j0i" secondAttribute="top" constant="6" id="eWG-yt-KKZ"/>
+                                                        <constraint firstItem="sON-hK-YZ6" firstAttribute="trailing" secondItem="JcP-qY-j0i" secondAttribute="trailingMargin" id="3Lh-9w-I4a"/>
+                                                        <constraint firstItem="sON-hK-YZ6" firstAttribute="top" secondItem="JcP-qY-j0i" secondAttribute="top" constant="6" id="SIV-ox-eit"/>
+                                                        <constraint firstItem="sON-hK-YZ6" firstAttribute="centerY" secondItem="JcP-qY-j0i" secondAttribute="centerY" id="gay-hJ-aLs"/>
+                                                        <constraint firstItem="sON-hK-YZ6" firstAttribute="leading" secondItem="JcP-qY-j0i" secondAttribute="leadingMargin" id="oCb-SF-OlW"/>
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jbm-pV-Zd0" customClass="CircularView" customModule="PokedexPro" customModuleProvider="target">
-                                                    <rect key="frame" x="33" y="49" width="100" height="100"/>
+                                                    <rect key="frame" x="33" y="49" width="100" height="101"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-pokeball-48" translatesAutoresizingMaskIntoConstraints="NO" id="e8n-at-lBu" customClass="CircularImageView" customModule="PokedexPro" customModuleProvider="target">
-                                                            <rect key="frame" x="8" y="8" width="85" height="85"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="85" id="4iz-VA-Tev"/>
-                                                                <constraint firstAttribute="width" constant="85" id="QZN-XZ-pjw"/>
-                                                            </constraints>
+                                                            <rect key="frame" x="8" y="8" width="84" height="85"/>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="100" id="Gaz-9j-OBa"/>
-                                                        <constraint firstItem="e8n-at-lBu" firstAttribute="top" secondItem="jbm-pV-Zd0" secondAttribute="top" constant="8" id="b8O-e5-cdH"/>
-                                                        <constraint firstAttribute="height" constant="100" id="p3a-PN-toy"/>
-                                                        <constraint firstAttribute="trailing" secondItem="e8n-at-lBu" secondAttribute="trailing" constant="7" id="y2a-Ek-ZOI"/>
+                                                        <constraint firstItem="e8n-at-lBu" firstAttribute="centerX" secondItem="jbm-pV-Zd0" secondAttribute="centerX" id="CYp-rb-oiP"/>
+                                                        <constraint firstItem="e8n-at-lBu" firstAttribute="top" secondItem="jbm-pV-Zd0" secondAttribute="topMargin" id="Pwc-m5-XL8"/>
+                                                        <constraint firstItem="e8n-at-lBu" firstAttribute="centerY" secondItem="jbm-pV-Zd0" secondAttribute="centerY" id="lWb-hq-Tgx"/>
+                                                        <constraint firstItem="e8n-at-lBu" firstAttribute="leading" secondItem="jbm-pV-Zd0" secondAttribute="leadingMargin" id="q5N-PN-C3P"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="JcP-qY-j0i" secondAttribute="bottom" constant="72" id="3Py-vu-hLr"/>
-                                                <constraint firstItem="jbm-pV-Zd0" firstAttribute="top" secondItem="VPY-yT-IBD" secondAttribute="top" constant="49" id="J7R-Iw-hTk"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="JcP-qY-j0i" secondAttribute="trailing" constant="53" id="P9m-Xh-BN4"/>
-                                                <constraint firstItem="JcP-qY-j0i" firstAttribute="leading" secondItem="VPY-yT-IBD" secondAttribute="leadingMargin" constant="52" id="QkY-vp-LcA"/>
-                                                <constraint firstAttribute="bottom" secondItem="jbm-pV-Zd0" secondAttribute="bottom" constant="50" id="Zx2-ce-BMU"/>
-                                                <constraint firstItem="jbm-pV-Zd0" firstAttribute="leading" secondItem="VPY-yT-IBD" secondAttribute="leading" constant="33" id="qLe-dB-7xF"/>
-                                                <constraint firstItem="JcP-qY-j0i" firstAttribute="top" secondItem="VPY-yT-IBD" secondAttribute="topMargin" constant="71" id="zf9-5C-KMb"/>
+                                                <constraint firstItem="JcP-qY-j0i" firstAttribute="top" secondItem="VPY-yT-IBD" secondAttribute="topMargin" constant="71" id="BQl-R5-Ihw"/>
+                                                <constraint firstItem="jbm-pV-Zd0" firstAttribute="top" secondItem="VPY-yT-IBD" secondAttribute="topMargin" constant="38" id="PXw-zQ-ClT"/>
+                                                <constraint firstItem="jbm-pV-Zd0" firstAttribute="centerY" secondItem="VPY-yT-IBD" secondAttribute="centerY" id="YRk-M0-ctZ"/>
+                                                <constraint firstItem="JcP-qY-j0i" firstAttribute="centerX" secondItem="VPY-yT-IBD" secondAttribute="centerX" id="l7o-WJ-OVt"/>
+                                                <constraint firstAttribute="trailing" secondItem="jbm-pV-Zd0" secondAttribute="trailing" constant="242" id="sKa-Af-CgX"/>
+                                                <constraint firstItem="jbm-pV-Zd0" firstAttribute="leading" secondItem="VPY-yT-IBD" secondAttribute="leadingMargin" constant="18" id="vx7-Iz-5KO"/>
+                                                <constraint firstItem="jbm-pV-Zd0" firstAttribute="centerY" secondItem="JcP-qY-j0i" secondAttribute="centerY" id="xo2-sd-ACN"/>
+                                                <constraint firstItem="JcP-qY-j0i" firstAttribute="leading" secondItem="VPY-yT-IBD" secondAttribute="leadingMargin" constant="52" id="xoS-an-OqZ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="pokemonImage" destination="e8n-at-lBu" id="NTs-M8-eId"/>
                                             <outlet property="pokemonName" destination="sON-hK-YZ6" id="VND-VP-dgP"/>
@@ -409,52 +409,52 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="225"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eA2-sY-sdd" customClass="LeftPartyPokemonView" customModule="PokedexPro" customModuleProvider="target">
-                                                    <rect key="frame" x="67" y="95" width="240" height="34"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qcq-TL-Us2" customClass="CircularView" customModule="PokedexPro" customModuleProvider="target">
+                                                    <rect key="frame" x="189" y="21" width="179" height="179"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZ8-3D-CYA">
-                                                            <rect key="frame" x="8" y="6" width="224" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-pokeball-48" translatesAutoresizingMaskIntoConstraints="NO" id="kL1-n8-Aqh" customClass="CircularImageView" customModule="PokedexPro" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="179" height="179"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="kL1-n8-Aqh" firstAttribute="bottom" secondItem="qcq-TL-Us2" secondAttribute="bottomMargin" constant="8" id="18l-WL-k3Z"/>
+                                                        <constraint firstItem="kL1-n8-Aqh" firstAttribute="centerY" secondItem="qcq-TL-Us2" secondAttribute="centerY" id="MUk-Fy-cvg"/>
+                                                        <constraint firstItem="kL1-n8-Aqh" firstAttribute="centerX" secondItem="qcq-TL-Us2" secondAttribute="centerX" id="QvF-IU-leB"/>
+                                                        <constraint firstItem="kL1-n8-Aqh" firstAttribute="leading" secondItem="qcq-TL-Us2" secondAttribute="leadingMargin" constant="-8" id="vTO-2b-JPy"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eA2-sY-sdd" customClass="LeftPartyPokemonView" customModule="PokedexPro" customModuleProvider="target">
+                                                    <rect key="frame" x="15" y="54" width="241" height="117"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZ8-3D-CYA">
+                                                            <rect key="frame" x="33" y="8" width="208" height="101"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="UZ8-3D-CYA" secondAttribute="trailing" constant="8" id="NtL-qS-rfv"/>
-                                                        <constraint firstItem="UZ8-3D-CYA" firstAttribute="top" secondItem="eA2-sY-sdd" secondAttribute="top" constant="6" id="Owd-kM-7kB"/>
-                                                        <constraint firstItem="UZ8-3D-CYA" firstAttribute="leading" secondItem="eA2-sY-sdd" secondAttribute="leading" constant="8" id="xnV-0f-VKF"/>
-                                                    </constraints>
-                                                </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qcq-TL-Us2" customClass="CircularView" customModule="PokedexPro" customModuleProvider="target">
-                                                    <rect key="frame" x="248" y="61" width="100" height="100"/>
-                                                    <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-pokeball-48" translatesAutoresizingMaskIntoConstraints="NO" id="kL1-n8-Aqh" customClass="CircularImageView" customModule="PokedexPro" customModuleProvider="target">
-                                                            <rect key="frame" x="8" y="7" width="85" height="85"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="85" id="583-Hz-lot"/>
-                                                                <constraint firstAttribute="height" constant="85" id="an7-Bb-LkK"/>
-                                                            </constraints>
-                                                        </imageView>
-                                                    </subviews>
-                                                    <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="100" id="SDo-Gm-ql4"/>
-                                                        <constraint firstItem="kL1-n8-Aqh" firstAttribute="top" secondItem="qcq-TL-Us2" secondAttribute="top" constant="7" id="o1d-D8-EFQ"/>
-                                                        <constraint firstAttribute="height" constant="100" id="qkK-fN-2x9"/>
-                                                        <constraint firstAttribute="trailing" secondItem="kL1-n8-Aqh" secondAttribute="trailing" constant="7" id="sri-HJ-KbY"/>
+                                                        <constraint firstItem="UZ8-3D-CYA" firstAttribute="bottom" secondItem="eA2-sY-sdd" secondAttribute="bottomMargin" id="RSh-7Q-BKh"/>
+                                                        <constraint firstItem="UZ8-3D-CYA" firstAttribute="leading" secondItem="eA2-sY-sdd" secondAttribute="leading" constant="33" id="YeS-6p-N0l"/>
+                                                        <constraint firstItem="UZ8-3D-CYA" firstAttribute="top" secondItem="eA2-sY-sdd" secondAttribute="topMargin" id="mF5-L4-N6P"/>
+                                                        <constraint firstAttribute="trailing" secondItem="UZ8-3D-CYA" secondAttribute="trailing" id="rlV-gP-2fE"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="qcq-TL-Us2" firstAttribute="top" secondItem="PjK-BI-kD2" secondAttribute="top" constant="61" id="7gF-Uf-zJ1"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="eA2-sY-sdd" secondAttribute="bottom" constant="85" id="Ynd-Yk-lBZ"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="eA2-sY-sdd" secondAttribute="trailing" constant="53" id="aBM-yH-oa4"/>
-                                                <constraint firstItem="eA2-sY-sdd" firstAttribute="top" secondItem="PjK-BI-kD2" secondAttribute="topMargin" constant="84" id="fqz-Kk-Roh"/>
-                                                <constraint firstAttribute="trailing" secondItem="qcq-TL-Us2" secondAttribute="trailing" constant="27" id="rs7-9A-cQx"/>
-                                                <constraint firstItem="eA2-sY-sdd" firstAttribute="leading" secondItem="PjK-BI-kD2" secondAttribute="leadingMargin" constant="52" id="wn6-2J-WkZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="eA2-sY-sdd" secondAttribute="trailing" constant="119" id="OwY-XN-rSd"/>
+                                                <constraint firstItem="eA2-sY-sdd" firstAttribute="centerY" secondItem="PjK-BI-kD2" secondAttribute="centerY" id="QZt-St-OzH"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="qcq-TL-Us2" secondAttribute="trailing" constant="-8" id="XOE-08-N53"/>
+                                                <constraint firstItem="qcq-TL-Us2" firstAttribute="top" secondItem="PjK-BI-kD2" secondAttribute="topMargin" constant="10" id="j7b-Tb-hRL"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="qcq-TL-Us2" secondAttribute="bottom" constant="14" id="mrY-3X-Ibi"/>
+                                                <constraint firstItem="eA2-sY-sdd" firstAttribute="leading" secondItem="PjK-BI-kD2" secondAttribute="leadingMargin" id="vod-Dl-xTE"/>
+                                                <constraint firstItem="eA2-sY-sdd" firstAttribute="top" secondItem="PjK-BI-kD2" secondAttribute="topMargin" constant="43" id="wKT-0d-04a"/>
+                                                <constraint firstItem="qcq-TL-Us2" firstAttribute="leading" secondItem="PjK-BI-kD2" secondAttribute="leading" constant="189" id="zUa-w0-f5h"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="pokemonImage" destination="kL1-n8-Aqh" id="ISN-z1-Mx6"/>
                                             <outlet property="pokemonName" destination="UZ8-3D-CYA" id="srI-3S-qgm"/>
@@ -463,7 +463,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.87306522659999997" green="0.87194638079999998" blue="0.89148983039999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="vdn-OX-L1l" firstAttribute="trailing" secondItem="OSE-1U-HXf" secondAttribute="trailing" id="OlC-fn-fQZ"/>
                             <constraint firstItem="vdn-OX-L1l" firstAttribute="bottom" secondItem="OSE-1U-HXf" secondAttribute="bottom" id="RpN-vF-cK4"/>
@@ -704,7 +704,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tKC-di-10F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2364" y="-642"/>
+            <point key="canvasLocation" x="3468" y="-622"/>
         </scene>
         <!--Trainer-->
         <scene sceneID="JhL-0u-m7w">
@@ -742,7 +742,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GA0-bL-UQg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4772" y="125"/>
+            <point key="canvasLocation" x="4764" y="125"/>
         </scene>
         <!--Pokedex-->
         <scene sceneID="M4a-r7-FdC">

@@ -24,8 +24,15 @@ class PartyController: UIViewController {
 
     // MARK: - Actions and Methods
     private func callMethods(){
-        tableView.dataSource = self
+        setupOutlets()
+        setbacgroundColor()
+    }
+    private func setupOutlets(){
+       tableView.dataSource = self
         tableView.delegate = self
+    }
+    private func setbacgroundColor(){
+        self.view.setGradient(cgColors: CGColor.grays)
     }
     private func fetchPokemon(){
         self.pokemon = pokemonDataManager.fetchItemsFromDocumentsDirectory()
