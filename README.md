@@ -12,7 +12,7 @@ This is a pokedexApp that helps user's better to understand pokemon and gives th
 >   * [Detail View Controller](#Detail-View-Controller)
 >   * [Favorite View Controller](#Favorite-View-Controller)
 >   * [Trainer Profile View Controller](#Trainer-Profile-View-Controller)
->   * [Images Of APP](#Images Of APP)
+>   * [Images Of APP](#Images-Of-APP)
 
 
 
