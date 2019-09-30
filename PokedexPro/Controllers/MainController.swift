@@ -51,7 +51,6 @@ class MainController: UIViewController {
         
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         guard let pokemonDetailController = storyBoard.instantiateViewController(withIdentifier: "PokemonDetailController") as? PokemonDetailController else {
-            showAlert(alertTitle: "Pushing VC Alert", alertMessage: "Id issue checking spelling", alertStyle: .alert)
             return
         }
         let pokemonSelected = collection[indexPath.row]
@@ -119,7 +118,7 @@ class MainController: UIViewController {
                         cell.type1.text = info.types[0].type.name
                         cell.type2.text = info.types[1].type.name
                     default:
-                        self?.showAlert(alertTitle: "Type Issue", alertMessage: "No Types Avaible for a caertain pokemon", alertStyle: .alert)
+                       break
                     }
                     let pokemonID = info.id
                     let url = URL(string: "https://pokeres.bastionbot.org/images/pokemon/\(pokemonID).png")
@@ -145,7 +144,6 @@ extension MainController: UICollectionViewDataSource {
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let pokemonCell = collectionView.dequeueReusableCell(withReuseIdentifier: "pokemonCell", for: indexPath) as? PokemonCell else {
-                   showAlert(alertTitle: "Cell Creation Error", alertMessage: "was not able to load the custom cell created", alertStyle: .alert)
                    return UICollectionViewCell() }
         if searchBarIsEmpty {
             setupCell(myCell: pokemonCell, pokemonList: pokemon, myPath: indexPath)
