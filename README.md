@@ -8,13 +8,18 @@ This is a pokedexApp that helps user's better to understand pokemon and gives th
 ## Table of contents
 
 >   * [About / Synopsis](#about-synopsis)
+>   * [Frameworks Used](#Frameworks-Used)
 >   * [Home View Controller](#Home-View-Controller)
 >   * [Detail View Controller](#Detail-View-Controller)
 >   * [Favorite View Controller](#Favorite-View-Controller)
 >   * [Trainer Profile View Controller](#Trainer-Profile-View-Controller)
 >   * [Images Of APP](#Images-Of-APP)
 
-
+### Frameworks Used
+  * AVFoundation
+  * Kingfisher 
+  * Toucan
+  * UIKit
 
 ### Home View Controller
   * User can search for Pokemon
@@ -46,3 +51,11 @@ This is a pokedexApp that helps user's better to understand pokemon and gives th
 ![DetailViewStats](https://user-images.githubusercontent.com/43886009/65877861-ab2e2280-e35a-11e9-8a0f-ff08bcd1bf60.png)
 ![detailviewMoves](https://user-images.githubusercontent.com/43886009/65877867-af5a4000-e35a-11e9-8936-672b151b6525.png)
 ![SaveToPokedex](https://user-images.githubusercontent.com/43886009/65877875-b1bc9a00-e35a-11e9-8b80-3d6b689c6aee.png)
+
+### Future Mode Implementations: 
+ * Saving to two your own pokemon party by double tapping 
+ * Adding Firebase for person login info to compare pokemon with other people
+ * Adding Alamofire
+ * Custom Alerts 
+ * Infintie Scrolling 
+ * Battle Mode with other users with your pokemon from your party
