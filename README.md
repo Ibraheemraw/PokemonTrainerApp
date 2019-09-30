@@ -42,4 +42,7 @@ This is a pokedexApp that helps user's better to understand pokemon and gives th
   * The amount of Pokemon they add to their favorites is the amount they have seen in the in their pokedex
   * User is able to enter in how much money they have 
   ### Images Of APP
-![homeView](<img src="https://user-images.githubusercontent.com/43886009/65877400-9604c400-e359-11e9-87ee-64d38afaf6f4.png" width="200" height="400" />)
+![homeView](https://user-images.githubusercontent.com/43886009/65877855-a79a9b80-e35a-11e9-93ef-b0415d2ad537.png)
+![DetailViewStats](https://user-images.githubusercontent.com/43886009/65877861-ab2e2280-e35a-11e9-8a0f-ff08bcd1bf60.png)
+![detailviewMoves](https://user-images.githubusercontent.com/43886009/65877867-af5a4000-e35a-11e9-8936-672b151b6525.png)
+![SaveToPokedex](https://user-images.githubusercontent.com/43886009/65877875-b1bc9a00-e35a-11e9-8b80-3d6b689c6aee.png)
